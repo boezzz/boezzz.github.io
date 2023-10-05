@@ -33,7 +33,7 @@ class App extends React.Component {
         <Entity primitive="a-light" type="point" intensity="2" position="2 4 4"/>
         <Entity primitive="a-sky" height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"/>
         {/* <Entity particle-system={{preset: 'snow', particleCount: 2000}}/> */}
-        <Entity text={{value: 'Hello, A-Frame React!', align: 'center'}} position={{x: 0, y: 2, z: -1}}/>
+        <Entity text={{value: 'Hello, My name is Boyang. You can call me Boe.', align: 'center'}} position={{x: 0, y: 2, z: -1}}/>
 {/* 
         <Entity
   id="box"
