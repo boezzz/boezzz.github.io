@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.js": "/static/js/main.174566ef.js",
-    "static/media/Roboto-msdf.png": "/static/media/Roboto-msdf.5a41f46a5020bc8f41ff.png",
+    "main.js": "/static/js/main.b142d832.js",
     "index.html": "/index.html",
-    "main.174566ef.js.map": "/static/js/main.174566ef.js.map"
+    "main.b142d832.js.map": "/static/js/main.b142d832.js.map"
   },
   "entrypoints": [
-    "static/js/main.174566ef.js"
+    "static/js/main.b142d832.js"
   ]
 }
