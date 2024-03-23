@@ -1,0 +1,154 @@
+.header {
+    background-color: rgb(12, 12, 12);
+    color: rgb(100, 100, 100);
+    font-size: 46px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 4%;
+  }
+
+.stickers-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 30vh;
+    background-color: rgb(12, 12, 12);
+    flex-wrap: wrap;
+  }
+  
+  .sticker-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    animation: emerge 1s ease-in-out forwards;
+    margin: 1%;
+  }
+
+  @keyframes emerge {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .sticker {
+    max-width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out,
+  }
+  
+  .sticker:hover {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .overlay-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 90%;
+    max-height: 95vh;
+    min-width: 50%;
+    min-height: 50vh;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  }
+
+  .overlay-text {
+    padding: 5%;
+    font-size: 30px;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    scale: 2;
+  }
+
+  .close-btn:hover {
+    animation: rotateCloseBtn 0.3s ease-in-out forwards; /* Apply animation on hover */
+  }
+  
+  @keyframes rotateCloseBtn {
+    0% {
+      transform: scale(1) rotate(0deg); /* Initial state */
+    }
+    100% {
+      transform: scale(1.3) rotate(90deg); /* Final state */
+    }
+  }
+
+  .overlay-text a {
+    position: relative;
+    text-decoration: none;
+    color: slategray;
+    padding-bottom: 5px;
+  }
+
+  .overlay-text img {
+    display: block;
+    max-height: 30vh;
+    width: max-content;
+    margin-top: 1%;
+    border-radius: 5px;
+    }
+
+
+  @media (max-width: 960px) {
+    .stickers-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        background-color: rgb(12, 12, 12);
+      }
+      
+      .sticker-container {
+        flex-direction: row; /* Display stickers in a row */
+        justify-content: center; /* Center stickers horizontally */
+        align-items: center; /* Center stickers vertically */
+        width: 50%; /* Set the width to 50% to allow stickers to overflow */
+        padding: 1%; /* Add padding to space out stickers */
+      }
+      
+      .sticker {
+        width: 100%; /* Set the width to 100% for responsiveness */
+      }
+
+      .overlay-text {
+        padding: 5%;
+        font-size: 20px;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+      }
+
+      .close-btn {
+        display: none;
+      }
+
+  }

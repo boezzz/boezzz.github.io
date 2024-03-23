@@ -1,0 +1,209 @@
+/* Styles for smaller screens */
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(12, 12, 12);
+  }
+  
+  .spline-container {
+    padding: 0%;
+    margin-top: 50px;
+    animation: grow-spline 3s ease-in-out;
+    transform-origin: center;
+  }
+  
+  @keyframes grow-spline {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .text-container {
+    color: rgb(100, 100, 100);
+    padding: 0rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .text-line {
+    margin-top: 75px;
+    font-size: 46px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .text-highlight {
+    font-size: 56px;
+    color: white;
+  }
+
+  /* Scroller styling */
+  .scroller {
+    margin-left: 30px;
+    display: inline-block;
+    height: 3em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+  }
+  .scroller > span {
+    position: absolute;
+    top: -0.1em;
+    animation: slide 10s infinite;
+  }
+  @keyframes slide {
+    0% {
+      top: -0.1em;
+    }
+    25% {
+      top: -2.5em;
+    }
+    50% {
+      top: -5em;
+    }
+    75% {
+      top: -7.5em;
+    }
+  }
+
+  /* waving animation */
+  .wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 4s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  
+  /* Styles for medium and larger screens */
+  @media (min-width: 960px) {
+    .home-container {
+      background-color: rgb(12, 12, 12);
+      flex-direction: row;
+    }
+  
+    .spline-container {
+      scale: 1.2;
+      padding: 0%;
+      width: 50%;
+      margin-top: 150px;
+      margin-bottom: 150px;
+      animation: grow-spline 3s ease-in-out;
+      transform-origin: center;
+    }
+
+    .text-container {
+      color: rgb(100, 100, 100);
+      padding: 0rem;
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 50%;
+    }
+
+    /* Scroller styling */
+  .scroller {
+    margin-left: 30px;
+    display: inline-block;
+    height: 2.2em;
+    line-height: 2.6em;
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+  }
+  .scroller > span {
+    position: absolute;
+    top: 0.2em;
+    animation: slide 10s infinite;
+  }
+  @keyframes slide {
+    0% {
+      top: 0.2em;
+    }
+    25% {
+      top: -2.0em;
+    }
+    50% {
+      top: -4.2em;
+    }
+    75% {
+      top: -6.4em;
+    }
+  }
+}
+
+  /* picture section */
+  .hero-container {
+    background-image: url('./images/img-home.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+  }
+  
+  .hero-container > h1 {
+    color: #fff;
+    font-size: 100px;
+    margin-top: -100px;
+  }
+  
+  .hero-container > p {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .hero-btns {
+    margin-top: 200px;
+  }
+  
+  .hero-btns .btn {
+    margin: 6px;
+  }
+  
+  .fa-play-circle {
+    margin-left: 4px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .hero-container > h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .hero-container > h1 {
+      font-size: 50px;
+      margin-top: -100px;
+    }
+  
+    .hero-container > p {
+      font-size: 30px;
+    }
+  
+    .btn {
+      width: 97%;
+    }
+  }

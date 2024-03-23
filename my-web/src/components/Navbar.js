@@ -1,0 +1,101 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import './Navbar.css';
+
+export default class Navbar extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      click: false,
+      button: true
+    };
+  }
+
+  handleClick = () => {
+    this.setState({ click: !this.state.click });
+  };
+
+  closeMobileMenu = () => {
+    this.setState({ click: false });
+  };
+
+  showButton = () => {
+    if (window.innerWidth <= 960) {
+      this.setState({ button: false });
+    } else {
+      this.setState({ button: true });
+    }
+  };
+
+  componentDidMount() {
+    this.showButton();
+    window.addEventListener('resize', this.showButton);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.showButton);
+  }
+
+  render() {
+    return (
+      <>
+        <nav className='navbar'>
+          <div className='navbar-container'>
+
+            <Link to='/' className='navbar-logo' onClick={this.closeMobileMenu}>
+              BZ
+              {/* TODO insert a logo here */}
+            </Link>
+
+            <div className='menu-icon' onClick={this.handleClick}>
+              <i className = {this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
+            </div>
+
+            <ul className={this.state.click ? 'nav-menu active' : 'nav-menu'}>
+
+              <li className='nav-item'>
+                <Link to='/' className='nav-links' onClick={this.closeMobileMenu}>
+                  Home
+                </Link>
+              </li>
+
+              <li className='nav-item'>
+                <Link
+                  to='/things-i-am-doing'
+                  className='nav-links'
+                  onClick={this.closeMobileMenu}
+                >
+                  Things I am doing
+                </Link>
+              </li>
+
+              <li className='nav-item'>
+                <Link
+                  to='/projects'
+                  className='nav-links'
+                  onClick={this.closeMobileMenu}
+                >
+                  My projects
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to='/contact'
+                  className='nav-links'
+                  onClick={this.closeMobileMenu}
+                >
+                  Contact me
+                </Link>
+              </li>
+
+            </ul>
+
+          </div>
+        </nav>
+      </>
+    );
+  }
+}
