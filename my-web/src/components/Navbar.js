@@ -45,8 +45,7 @@ export default class Navbar extends React.Component {
           <div className='navbar-container'>
 
             <Link to='/' className='navbar-logo' onClick={this.closeMobileMenu}>
-              BZ
-              {/* TODO insert a logo here */}
+              <img width="55" height="55" src='asset/images/stamp_logo.png' alt='stamp logo'/>
             </Link>
 
             <div className='menu-icon' onClick={this.handleClick}>

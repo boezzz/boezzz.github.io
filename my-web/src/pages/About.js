@@ -13,7 +13,6 @@ import sticker4 from './stickers/asuw_logo.png';
 import sticker5 from './stickers/rl-logo.png';
 import sticker6 from './stickers/hugsi_logo.png';
 import sticker7 from './stickers/id_tech_logo.png';
-import image7 from './images/id_drawing.jpg';
 
 function About() {
   const [selectedSticker, setSelectedSticker] = useState(null);
@@ -78,7 +77,7 @@ function About() {
     { id: 7, image: sticker7, story:
       <div className='overlay-text'>
         In the summer of 2022, I worked at iD Tech and taught over 100 students (ages 7 to 17) about C# Programming, Game Development in Unity, JavaScript Programming, and other technical lessons for the first time in my life. It's definitely not going to be surprising if I end up becoming a teacher!
-        <img src={image7} alt="drawing of id tech logo on a white board" />
+        <img src= 'asset/images/id_drawing.jpg' alt="drawing of id tech logo on a white board" />
       </div>
     },
   ];
