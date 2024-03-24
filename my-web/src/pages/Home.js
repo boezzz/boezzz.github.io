@@ -26,12 +26,12 @@ function Home() {
                         coding XR projects<br />
                         empowering sustainability<br />
                         reading history books<br />
-                        collecting old laptops
+                        collecting tech gadgets
                     </span>
                 </div>
             </p>
             <p className='text-line'>
-                I want to <span className="text-highlight shuffle">prove to people what we are capable of, which is beyond imaginable, and there's still hope</span>
+                I want to <span className="text-highlight shuffle"> show to people that uncertainty is the refuge of hope</span>
             </p>
         </div>
         </div>

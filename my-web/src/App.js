@@ -12,6 +12,10 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
+// import all project pages
+import Beatbounce from './pages/project_pages/Beatbounce';
+import Forward_to_past from './pages/project_pages/Forward_to_past';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +33,26 @@ const router = createBrowserRouter([
   {
     path: "/things-i-am-doing",
     element: <About />,
+  },
+  {
+    path: "/p1",
+    element: <Beatbounce />,
+  },
+  {
+    path: "/p2",
+    element: <Forward_to_past />,
+  },
+  {
+    path: "/p3",
+    element: <Projects />,
+  },
+  {
+    path: "/p4",
+    element: <Projects />,
+  },
+  {
+    path: "/p5",
+    element: <Projects />,
   },
 ]);
 

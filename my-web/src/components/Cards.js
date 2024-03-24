@@ -15,7 +15,7 @@ function Cards() {
             />
             <CardItem
               src='asset/images/tothepast.jpg'
-              text='Back to the past: AI track winner for Stanford XR Hackathon 2023'
+              text='Forward to the past: AI track winner for Stanford XR Hackathon 2023'
               path='/p2'
             />
           </ul>
