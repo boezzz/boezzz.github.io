@@ -24,7 +24,7 @@ function Contact() {
         <div className="info-section">
           <div className="contact-info">
             <p>
-              Email: boezzz333@gmail.com
+              Email: boezzz333 @ gmail.com
             </p>
           </div>
           <div className="contact-info">
