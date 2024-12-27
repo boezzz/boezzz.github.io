@@ -1,0 +1,59 @@
+.title {
+    background-image: url('../images/foggy_forest.jpeg');
+    background-color: rgb(100, 100, 100);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10%;
+    font-family: 'Courier New', monospace;
+}
+
+.title h1,
+.title h2,
+.title h3 {
+    color: rgba(255, 255, 255, 0.80);
+    margin: 0 0 10px;
+}
+
+article {
+    padding: 10%;
+    background-color: rgb(12, 12, 12);
+    min-height: 80vh;
+}
+
+article p {
+    margin-bottom: 20px;
+    color:rgba(255, 255, 255, 0.80);
+    font-size: 20px;
+}
+
+article img {
+    margin-bottom: 20px;
+    display: block;
+    justify-self: center;
+    max-width: 80%;
+    width: 60%;
+    padding: 0;
+    height: auto;
+    border: none;
+}
+
+article iframe {
+    margin-bottom: 20px;
+    display: block;
+    justify-self: center;
+    max-width: 80%;
+    width: 60%;
+    padding: 0;
+    aspect-ratio: 16 / 9; /* This ensures the 16:9 aspect ratio */
+    height: auto;
+    border: none;
+}
+
+article a {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: slategray;
+    font-size: 20px;
+  }

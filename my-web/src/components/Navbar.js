@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import './Navbar.css';
 
+// navigation header
 export default class Navbar extends React.Component {
 
   constructor(props) {
@@ -40,61 +41,52 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <>
-        <nav className='navbar'>
-          <div className='navbar-container'>
+      <nav className='navbar'>
+        <div className='navbar-container'>
 
-            <Link to='/' className='navbar-logo' onClick={this.closeMobileMenu}>
-              <img width="55" height="55" src='asset/images/stamp_logo.png' alt='stamp logo'/>
-            </Link>
+          <Link to='/' className='navbar-logo' onClick={this.closeMobileMenu}>
+            <img width="55" height="55" src='asset/images/stamp_logo.png' alt='stamp logo'/>
+          </Link>
 
-            <div className='menu-icon' onClick={this.handleClick}>
-              <i className = {this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
-            </div>
-
-            <ul className={this.state.click ? 'nav-menu active' : 'nav-menu'}>
-
-              <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={this.closeMobileMenu}>
-                  Home
-                </Link>
-              </li>
-
-              <li className='nav-item'>
-                <Link
-                  to='/things-i-am-doing'
-                  className='nav-links'
-                  onClick={this.closeMobileMenu}
-                >
-                  Things I am doing
-                </Link>
-              </li>
-
-              <li className='nav-item'>
-                <Link
-                  to='/projects'
-                  className='nav-links'
-                  onClick={this.closeMobileMenu}
-                >
-                  My projects
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  to='/contact'
-                  className='nav-links'
-                  onClick={this.closeMobileMenu}
-                >
-                  Contact me
-                </Link>
-              </li>
-
-            </ul>
-
+          <div className='menu-icon' onClick={this.handleClick}>
+            <i className = {this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
           </div>
-        </nav>
-      </>
+
+          <ul className={this.state.click ? 'nav-menu active' : 'nav-menu'} onClick={this.closeMobileMenu}>
+
+            <li className='nav-item'>
+              <Link 
+                to='/' 
+                className='nav-links' 
+                onClick={this.closeMobileMenu}
+              >
+                Home
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/blog'
+                className='nav-links'
+                onClick={this.closeMobileMenu}
+              >
+                Blog
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/resume'
+                className='nav-links'
+                onClick={this.closeMobileMenu}
+              >
+                Resume/CV
+              </Link>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
     );
   }
 }

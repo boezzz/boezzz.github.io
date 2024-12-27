@@ -10,30 +10,30 @@ function Cards() {
           <ul className='cards__items'>
             <CardItem
               src='asset/images/beatbounce.png'
-              text='BeatBounce: bring music production to 3D'
-              path='/p1'
+              text='BeatBounce: bringing music production to 3D'
+              path='/beatbounce'
             />
             <CardItem
               src='asset/images/tothepast.jpg'
-              text='Forward to the past: AI track winner for Stanford XR Hackathon 2023'
-              path='/p2'
+              text='Teaching history through conversation'
+              path='/forward-to-past'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
-              src='asset/images/cnact_logo.png'
-              text='CNACT: benchmarking corporate climate disclosures using LLM'
-              path='/p3'
+              src='asset/images/IMG_2642.jpg'
+              text='A priliminary exploration of XR cooking'
+              path='/xr-cooking-capstone'
             />
             <CardItem
               src='asset/images/unspoken.png'
-              text='Unspoken: interactive way to learn American Sign Language'
-              path='/p4'
+              text='Using XR to learn American Sign Language: challenges and opportunties'
+              path='/unspoken'
             />
             <CardItem
-              src='asset/images/flipper_logo.png'
-              text='More projects coming'
-              path='/p5'
+              src='asset/images/IMG_2531.jpg'
+              text='Friday Harbor, 2024'
+              path='/friday-harbor-2024'
             />
           </ul>
         </div>
