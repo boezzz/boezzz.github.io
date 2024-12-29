@@ -25,17 +25,17 @@
     display: flex;
     flex: 1;
     margin: 0 1rem;
-    border-radius: 10px;
+    border-radius: 0px;
   }
   
   .cards__item__link {
     display: flex;
     flex-flow: column;
     width: 100%;
-    box-shadow: 0 12px 30px rgba(56, 125, 255, 0.17);
+    box-shadow: 0 16px 38px rgba(132, 176, 103, 0.37);;
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
+    border-radius: 0px;
     overflow: hidden;
     text-decoration: none;
     background-color: black;
@@ -77,7 +77,7 @@
   }
   
   .cards__item__text {
-    color: rgb(100, 100, 100);
+    color: white;
     font-size: 18px;
     line-height: 24px;
   }

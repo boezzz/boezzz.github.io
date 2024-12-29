@@ -33,21 +33,22 @@
 .profile-text h1 {
   margin: 0;
   font-size: 2.5rem;
-  color: rgb(100, 100, 100);
+  color: rgb(179, 179, 179);
 }
 
 .profile-text .name {
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(132, 176, 103);
 }
 
 .profile-text p {
   margin: 30px 0 0;
   font-size: 1.2rem;
-  color: rgb(100, 100, 100);
+  color: rgb(179, 179, 179);
+  line-height: 1.5;
 }
 
 .profile-text a {
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(132, 176, 103);
 }
 
 .social-links {
@@ -56,13 +57,13 @@
 
 .social-links a {
   margin: 0 8px 0;
-  color: rgb(100, 100, 100);
+  color: rgb(179, 179, 179);
   font-size: 3rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: rgba(255, 255, 255, 0.80);
+  color: rgba(132, 176, 103);
 }
 
 
@@ -73,7 +74,7 @@
   }
 
   .text-section a {
-    color: rgba(255, 255, 255, 0.80);
+    color: rgba(132, 176, 103);
   }
 
   .text-line {
@@ -84,7 +85,7 @@
 
   .text-line h1{
     font-size: 2.5rem;
-    color: rgb(100, 100, 100);
+    color: rgba(132, 176, 103);
   }
 
   .text-line ul{
@@ -100,7 +101,8 @@
   .text-line li{
     margin: 20px 0 0;
     font-size: 1.2rem;
-    color: rgb(100, 100, 100);
+    color: rgb(179, 179, 179);
+    line-height: 1.5;
   }
 
   /* waving animation */
@@ -136,7 +138,7 @@
   }
   
   .hero-container > h1 {
-    color: rgba(255, 255, 255, 0.80);
+    color: rgba(132, 176, 103);
     font-size: 100px;
     margin-left: 1vw;
     margin-top: 50px;
@@ -186,17 +188,17 @@
     .profile-text h1 {
       margin: 0;
       font-size: 1.8rem;
-      color: rgb(100, 100, 100);
+      color: rgb(179, 179, 179);
     }
     
     .profile-text p {
       margin: 15px 0 0;
-      color: rgb(100, 100, 100);
+      color: rgb(179, 179, 179);
     }
 
     .social-links a {
       margin: 0px 8px 0px;
-      color: rgb(100, 100, 100);
+      color: rgba(132, 176, 103);
       font-size: 2rem;
       transition: color 0.3s ease;
     }
@@ -208,7 +210,7 @@
 
     .text-line h1{
       font-size: 1.8rem;
-      color: rgb(100, 100, 100);
+      color: rgba(132, 176, 103);
     }
 
 

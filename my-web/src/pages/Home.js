@@ -105,7 +105,7 @@ function Home() {
       <div className='hero-btns'>
         <Button
           className='btns'
-          buttonStyle='btn--primary'
+          buttonStyle='btn--outline'
           buttonSize='btn--large'
         >
         ._Check out my blogs
