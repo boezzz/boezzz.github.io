@@ -20,7 +20,8 @@ function Home() {
           </div>
 
           <div className="profile-text">
-            <h1>Hi<span className="wave">&#128075;</span> My name is <span className="name">Boyang 'Boe' Zhou (周博洋)</span></h1>
+            <h1><span className="englishname">Boyang 'Boe' Zhou</span></h1>
+            <h1><span className='chinesename'>周博洋</span></h1>
             <div className="social-links">
               <a
                 href="https://www.linkedin.com/in/zby2003/"
@@ -65,7 +66,7 @@ function Home() {
                 <i className='fa-brands fa-orcid' />
               </a>
           </div>
-          <p> "Computing a sustainable future, spatially"</p>
+          <p><span className='tagline'>"Computing a sustainable future, spatially"</span></p>
             <p> I am a master's student at the University of Washington, where I also earned my undergraduate degree in Computer Science with a minor in Environmental Studies. <i>I am currently open to PhD opportunities starting in 2026.</i></p>
             <p> I am dedicated to investigating how emerging technologies, such as AI and XR, influence human behavior and seeking innovative ways to guide their development. My goal is to ensure these technologies contribute to building a just society, where seven generations beyond us can thrive both physically and spiritually. </p>
             <p> I am currently affiliated with the <a href='https://realitylab.uw.edu/'>UW Reality Lab</a> (Student Researcher), <a href='https://makeabilitylab.cs.washington.edu/'>Makeability Lab</a> (Student Researcher), <a href='https://www.instagram.com/uw_xra/'>Extended Reality Association</a> (President), and <a href='https://csf.uw.edu/'>Campus Sustainability Fund</a> (Grant & Project Coordinator). I have previously worked for the Climate Risk Lab and the King County Department of Natural Resources and Parks.</p>
@@ -77,8 +78,20 @@ function Home() {
         <div className='text-line'>
           <h1>Publications</h1>
           <ul>
-            <li>Extended Reality and Environmental Communication: A Literature Review (Upcoming, 2025)</li>
-            <li>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation (<a href='https://svd-keyframe-interpolation.github.io/'>Link</a>, 2024)</li>
+            <li>Extended Reality and Environmental Communication: A Literature Review [Upcoming]</li>
+            <li>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation [<a href='https://svd-keyframe-interpolation.github.io/'>Link</a>, ICLR 2025]</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className='text-section'>
+        <div className='text-line'>
+          <h1>Conferences</h1>
+          <ul>
+            <li><b>Session Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025 </li>
+            <li><b>Session Speaker</b>: The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>
+            <li><b>VR Theater</b>: SIGGRAPH 2024</li>
+            <li><b>Panel Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2024</li>
           </ul>
         </div>
       </div>
@@ -87,7 +100,7 @@ function Home() {
         <div className='text-line milestone'>
           <h1>Footsteps</h1>
           <ul>
-            <li>Summer 2021: started my journey at UW CSE</li>
+            <li>Summer 2021: moved to the US from Nanjing, China. began my journey at UW</li>
             <li>Summer 2022: taught CS at iDTech Camp</li>
             <li>Fall 2022: started to work on my first XR research project—MR-assisted Epidural Steroid Injection; revived the student XR club</li>
             <li>Winter 2023: with the rise of generative AI, began to think about "what I want from technology", not "technology I want"</li>
@@ -95,6 +108,7 @@ function Home() {
             <li>Summer 2023: joined the Campus Sustainability Fund and began to study environmental issues systematically</li>
             <li>Summer 2024: tried working for the government to influence policy change from the top down, and realized it's not my thing. In the end, I am still a geek</li>
             <li>Fall 2024: made the decision to pursue a PhD as I can have more freedom to create without organizational influence</li>
+            <li>Winter 2025: first paper published!</li>
           </ul>
         </div>
       </div>

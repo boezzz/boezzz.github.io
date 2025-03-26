@@ -18,6 +18,11 @@ function Cards() {
               text='Teaching history through conversation'
               path='/forward-to-past'
             />
+            <CardItem
+              src='asset/images/spine.png'
+              text='AR for Epidural Steroid Injection'
+              path='/ar-esi'
+            />
           </ul>
           <ul className='cards__items'>
             <CardItem

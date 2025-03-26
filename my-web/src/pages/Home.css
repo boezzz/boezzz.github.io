@@ -10,7 +10,7 @@
 .profile-section {
   display: flex;
   padding: 20px;
-  max-width: 90vw;
+  max-width: 70vw;
   width: 100%;
   gap: 20px;
 }
@@ -36,8 +36,16 @@
   color: rgb(179, 179, 179);
 }
 
-.profile-text .name {
+.profile-text .englishname {
   color: rgba(132, 176, 103);
+  /* font-family: "Shadows Into Light", serif; */
+}
+
+.profile-text .chinesename {
+  color: rgba(132, 176, 103);
+  font-family: "Zhi Mang Xing", serif;
+  font-weight: 300;
+  
 }
 
 .profile-text p {
@@ -45,6 +53,13 @@
   font-size: 1.2rem;
   color: rgb(179, 179, 179);
   line-height: 1.5;
+  font-weight: 300;
+}
+
+.profile-text .tagline {
+  font-size: 2rem;
+  font-family: "Shadows Into Light", serif;
+  color: rgba(132, 176, 103);
 }
 
 .profile-text a {
@@ -77,15 +92,20 @@
     color: rgba(132, 176, 103);
   }
 
+  .text-section b {
+    color: rgba(132, 176, 103);
+  }
+
   .text-line {
     margin: 0 20% 0;
     width: 60%;
-    font-family: 'Courier New', monospace;
   }
 
   .text-line h1{
     font-size: 2.5rem;
     color: rgba(132, 176, 103);
+    border-left: 2px solid rgb(179, 179, 179);
+    padding-left: 10px;
   }
 
   .text-line ul{
@@ -148,8 +168,6 @@
     margin-top: 8px;
     color: rgba(255, 255, 255, 0.80);
     font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-      'Lucida Sans', Arial, sans-serif;
   }
   
   .hero-btns {

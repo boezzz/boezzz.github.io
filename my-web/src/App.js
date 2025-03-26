@@ -19,6 +19,8 @@ import Beatbounce from './pages/blog_pages/Beatbounce';
 import Forward_to_past from './pages/blog_pages/Forward_to_past';
 import Unspoken from './pages/blog_pages/Unspoken';
 import FridayHarbor from './pages/blog_pages/friday_harbor';
+import XRCooking from './pages/blog_pages/XR_cooking';
+import ARESI from './pages/blog_pages/AR_esi';
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -70,7 +72,7 @@ const router = createHashRouter([
       },
       {
         path: "/xr-cooking-capstone",
-        element: <Blogs />,
+        element: <XRCooking />,
       },
       {
         path: "/unspoken",
@@ -79,6 +81,10 @@ const router = createHashRouter([
       {
         path: "/friday-harbor-2024",
         element: <FridayHarbor />,
+      },
+      {
+        path: "/ar-esi",
+        element: <ARESI />,
       },
     ],
   },
