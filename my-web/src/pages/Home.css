@@ -28,6 +28,7 @@
 .profile-text {
   flex: 1;
   margin-left: 10px;
+  text-align: right;
 }
 
 .profile-text h1 {
@@ -54,12 +55,15 @@
   color: rgb(179, 179, 179);
   line-height: 1.5;
   font-weight: 300;
+  text-align: left;
 }
 
-.profile-text .tagline {
+.profile-text p .tagline {
+  display: block;
   font-size: 2rem;
   font-family: "Shadows Into Light", serif;
   color: rgba(132, 176, 103);
+  text-align: right;
 }
 
 .profile-text a {
@@ -68,6 +72,7 @@
 
 .social-links {
   margin: 30px 0 0;
+  text-align: right;
 }
 
 .social-links a {
@@ -196,11 +201,13 @@
     .profile-photo {
       width: 60%;
       height: auto;
+      align-self: flex-end;
     }
 
     .profile-text {
       flex: 1;
       margin-left: 0px;
+      text-align: right;
     }
 
     .profile-text h1 {
