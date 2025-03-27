@@ -5,14 +5,16 @@
     flex-direction: column;
     background-color: rgb(12, 12, 12);
     align-items: center;
+    padding-top: 40px;
 }
 
 .profile-section {
   display: flex;
-  padding: 20px;
-  max-width: 70vw;
+  padding: 40px;
+  max-width: 1200px;
   width: 100%;
-  gap: 20px;
+  gap: 40px;
+  margin-bottom: 60px;
 }
 
 .profile-photo {
@@ -31,39 +33,72 @@
   text-align: right;
 }
 
+.name-container {
+  text-align: right;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .profile-text h1 {
   margin: 0;
   font-size: 2.5rem;
   color: rgb(179, 179, 179);
+  line-height: 1.2;
+}
+
+.profile-text h1:first-child {
+  margin-bottom: 4px;
 }
 
 .profile-text .englishname {
   color: rgba(132, 176, 103);
-  /* font-family: "Shadows Into Light", serif; */
+  letter-spacing: 0.5px;
 }
 
 .profile-text .chinesename {
   color: rgba(132, 176, 103);
   font-family: "Zhi Mang Xing", serif;
   font-weight: 300;
-  
+  font-size: 2.7rem;
+  margin-bottom: 14px;
 }
 
 .profile-text p {
-  margin: 30px 0 0;
+  margin: 25px 0 0;
   font-size: 1.2rem;
   color: rgb(179, 179, 179);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 300;
   text-align: left;
 }
 
-.profile-text p .tagline {
-  display: block;
-  font-size: 2rem;
+.profile-text .tagline {
+  font-size: 1.5rem;
   font-family: "Shadows Into Light", serif;
-  color: rgba(132, 176, 103);
+  color: rgba(132, 176, 103, 0.9);
+  display: block;
   text-align: right;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  font-style: italic;
+}
+
+.profile-text .tagline::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(179, 179, 179, 0.2) 0%, rgba(160, 161, 159, 0.7) 100%);
+  margin-top: 14px;
+  padding-bottom: 2px;
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+  animation: shimmer 2.5s infinite;
+  animation-delay: 0.5s;
 }
 
 .profile-text a {
@@ -71,185 +106,280 @@
 }
 
 .social-links {
-  margin: 30px 0 0;
+  margin: 20px 0 25px;
   text-align: right;
 }
 
 .social-links a {
-  margin: 0 8px 0;
+  margin: 0 10px 0 0;
   color: rgb(179, 179, 179);
-  font-size: 3rem;
-  transition: color 0.3s ease;
+  font-size: 2.3rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:last-child {
+  margin-right: 0;
 }
 
 .social-links a:hover {
   color: rgba(132, 176, 103);
+  transform: translateY(-5px);
+  text-shadow: 0 5px 15px rgba(132, 176, 103, 0.4);
 }
 
+.text-section {
+  width: 100%;
+  padding: 0;
+  margin-bottom: 80px;
+  max-width: 1200px;
+}
 
-  .text-section {
-    width: 100%;
-    padding: 0rem;
-    margin-bottom: 50px;
-  }
+.text-section a {
+  color: rgba(132, 176, 103);
+}
 
-  .text-section a {
-    color: rgba(132, 176, 103);
-  }
+.text-section b {
+  color: rgba(132, 176, 103);
+}
 
-  .text-section b {
-    color: rgba(132, 176, 103);
-  }
+.text-line {
+  margin: 0 auto;
+  width: 80%;
+  max-width: 900px;
+}
 
-  .text-line {
-    margin: 0 20% 0;
-    width: 60%;
-  }
+.text-line h1{
+  font-size: 2.5rem;
+  color: rgba(132, 176, 103);
+  padding-left: 15px;
+  margin-bottom: 20px;
+  position: relative;
+}
 
-  .text-line h1{
-    font-size: 2.5rem;
-    color: rgba(132, 176, 103);
-    border-left: 2px solid rgb(179, 179, 179);
-    padding-left: 10px;
-  }
+.text-line h1.animate::after {
+  animation-play-state: running;
+}
 
-  .text-line ul{
-    list-style-position: inside;
-    list-style-type: "- ";
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
   }
+  100% {
+    background-position: 200% 0;
+  }
+}
 
-  .milestone ul{
-    list-style-position: inside;
-    list-style-type: "🌱 ";
-  }
+.text-line h1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+  animation-play-state: paused;
+  pointer-events: none;
+}
 
-  .text-line li{
-    margin: 20px 0 0;
-    font-size: 1.2rem;
-    color: rgb(179, 179, 179);
-    line-height: 1.5;
-  }
+.text-line h1.animate::before {
+  animation-play-state: running;
+}
 
-  /* waving animation */
-  .wave {
-    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-    animation-duration: 4s;        /* Change to speed up or slow down */
-    animation-iteration-count: infinite;  /* Never stop waving :) */
-    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-    display: inline-block;
-  }
-  
-  @keyframes wave-animation {
-      0% { transform: rotate( 0.0deg) }
-     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-     20% { transform: rotate(-8.0deg) }
-     30% { transform: rotate(14.0deg) }
-     40% { transform: rotate(-4.0deg) }
-     50% { transform: rotate(10.0deg) }
-     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
-  }
+.text-line ul{
+  list-style-position: inside;
+  list-style-type: "- ";
+}
 
-  /* picture section */
-  .hero-container {
-    background-image: url('./images/img-home.jpg');
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
-    object-fit: contain;
-  }
-  
-  .hero-container > h1 {
-    color: rgba(132, 176, 103);
-    font-size: 100px;
-    margin-left: 1vw;
-    margin-top: 50px;
-  }
-  
-  .hero-container > p {
-    margin-top: 8px;
-    color: rgba(255, 255, 255, 0.80);
-    font-size: 32px;
-  }
-  
-  .hero-btns {
-    margin-left: 1vw;
-    margin-top: 50px;
-  }
-  
-  .hero-btns .btn {
-    margin: 6px;
-  }
-  
-  .fa-play-circle {
-    margin-left: 4px;
-  }
-  
-  @media screen and (max-width: 960px) {
+.milestone ul{
+  list-style-position: inside;
+  list-style-type: "🌱 ";
+}
+
+.text-line li{
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: rgb(179, 179, 179);
+  line-height: 1.6;
+}
+
+/* waving animation */
+.wave {
+  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+  animation-duration: 4s;        /* Change to speed up or slow down */
+  animation-iteration-count: infinite;  /* Never stop waving :) */
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* picture section */
+.hero-container {
+  background-image: url('./images/img-home.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.hero-container > h1 {
+  color: rgba(132, 176, 103);
+  font-size: 100px;
+  margin-left: 1vw;
+  margin-top: 50px;
+}
+
+.hero-container > p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 32px;
+}
+
+.hero-btns {
+  margin-left: 1vw;
+  margin-top: 50px;
+}
+
+.hero-btns .btn {
+  margin: 6px;
+}
+
+.fa-play-circle {
+  margin-left: 4px;
+}
+
+@media screen and (max-width: 960px) {
     .profile-section {
-      padding: 0px;
-      gap: 0px;
+      padding: 25px;
+      gap: 20px;
       display: flex;
       flex-direction: column;
-      width: 80%;
-      margin: 0 10% 0;
+      width: 90%;
+      margin: 0 auto 40px;
+      align-items: center;
     }
 
     .profile-photo {
-      width: 60%;
+      width: 70%;
+      max-width: 300px;
       height: auto;
-      align-self: flex-end;
+      margin-bottom: 20px;
     }
 
     .profile-text {
       flex: 1;
       margin-left: 0px;
       text-align: right;
+      width: 100%;
+    }
+
+    .name-container {
+      text-align: center;
+      margin-bottom: 18px;
+      align-items: center;
     }
 
     .profile-text h1 {
-      margin: 0;
+      margin: 0 0 5px;
       font-size: 1.8rem;
-      color: rgb(179, 179, 179);
+      text-align: center;
     }
     
-    .profile-text p {
-      margin: 15px 0 0;
-      color: rgb(179, 179, 179);
+    .profile-text h1:first-child {
+      margin-bottom: 2px;
+    }
+    
+    .profile-text .chinesename {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .profile-text .tagline {
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 0 0 12px;
+    }
+    
+    .profile-text .tagline::after {
+      margin-top: 10px;
+    }
+    
+    .social-links {
+      margin: 15px 0 20px;
+      text-align: center;
     }
 
     .social-links a {
-      margin: 0px 8px 0px;
-      color: rgba(132, 176, 103);
-      font-size: 2rem;
-      transition: color 0.3s ease;
+      margin: 0 12px;
+      font-size: 1.8rem;
+    }
+
+    .text-section {
+      width: 90%;
+      margin-bottom: 50px;
     }
 
     .text-line {
-      margin: 0 10% 0;
-      width: 80%;
+      margin: 0 auto;
+      width: 100%;
     }
 
     .text-line h1{
       font-size: 1.8rem;
       color: rgba(132, 176, 103);
+      margin-bottom: 15px;
     }
 
+    .text-line h1::after {
+      height: 1px;
+      margin-top: 8px;
+    }
+
+    .text-line li {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
 
     .hero-container > h1 {
       font-size: 50px;
       margin-top: 20px;
+      padding: 0 20px;
     }
+    
     .hero-btns {
       max-width: 60%;
-      margin-left: 0vw;
-      margin-top: 50px;
+      margin-left: 20px;
+      margin-top: 30px;
     }
 
     .hero-btns .btn {
       margin: 0px;
     }
-  }
+}
+
+.bio-text {
+  margin-top: 5px;
+}
+
+.bio-text p {
+  margin: 16px 0 0;
+  font-size: 1.2rem;
+  color: rgb(179, 179, 179);
+  line-height: 1.6;
+  font-weight: 300;
+  text-align: left;
+}

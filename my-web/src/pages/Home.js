@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
 import '../App.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -8,6 +8,66 @@ import Footer from '../components/Footer';
 import { Button } from '../components/Button';
 
 function Home() {
+  useEffect(() => {
+    // Observer for when elements enter/exit the viewport
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        } else {
+          entry.target.classList.remove('animate');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    const headings = document.querySelectorAll('.text-line h1');
+    headings.forEach(heading => {
+      observer.observe(heading);
+    });
+
+    // Variables for scroll detection
+    let scrollTimeout;
+    const handleScroll = () => {
+      // Add animate class to visible headings during scroll
+      document.querySelectorAll('.text-line h1').forEach(heading => {
+        const rect = heading.getBoundingClientRect();
+        const isVisible = 
+          rect.top < window.innerHeight && 
+          rect.bottom > 0;
+        
+        if (isVisible) {
+          heading.classList.add('animate');
+        }
+      });
+      
+      // Clear the timeout if it's been set
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      
+      // Set a timeout to run after scrolling stops
+      scrollTimeout = setTimeout(() => {
+        document.querySelectorAll('.text-line h1').forEach(heading => {
+          heading.classList.remove('animate');
+        });
+      }, 1000);
+    };
+    
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Cleanup function
+    return () => {
+      headings.forEach(heading => {
+        observer.unobserve(heading);
+      });
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+    };
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -66,7 +126,7 @@ function Home() {
                 <i className='fa-brands fa-orcid' />
               </a>
           </div>
-          <p><span className='tagline'>"Computing a sustainable future, spatially"</span></p>
+          <div className='tagline'>"Computing a sustainable future, spatially"</div>
             <p> I am a master's student at the University of Washington, where I also earned my undergraduate degree in Computer Science with a minor in Environmental Studies. <i>I am currently open to PhD opportunities starting in 2026.</i></p>
             <p> I am dedicated to investigating how emerging technologies, such as AI and XR, influence human behavior and seeking innovative ways to guide their development. My goal is to ensure these technologies contribute to building a just society, where seven generations beyond us can thrive both physically and spiritually. </p>
             <p> I am currently affiliated with the <a href='https://realitylab.uw.edu/'>UW Reality Lab</a> (Student Researcher), <a href='https://makeabilitylab.cs.washington.edu/'>Makeability Lab</a> (Student Researcher), <a href='https://www.instagram.com/uw_xra/'>Extended Reality Association</a> (President), and <a href='https://csf.uw.edu/'>Campus Sustainability Fund</a> (Grant & Project Coordinator). I have previously worked for the Climate Risk Lab and the King County Department of Natural Resources and Parks.</p>

@@ -1,16 +1,99 @@
-.doc-container {
+.resume-container {
     display: flex;
     flex-direction: column;
     background-color: rgb(12, 12, 12);
     align-items: center;
-    min-width: 100%;
+    width: 100%;
     min-height: 90vh;
+    padding: 30px 0 50px;
 }
 
-.doc-container iframe{
-    justify-self: center;
-    border: none;
-    background-color: rgb(12, 12, 12);
+.resume-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 80%;
-    aspect-ratio: 1 / 1.41;
+    max-width: 900px;
+    margin-bottom: 12px;
+}
+
+
+
+.download-link {
+    color: rgba(132, 176, 103, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.download-link i {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.download-link:hover {
+    color: rgba(132, 176, 103, 1);
+    text-decoration: underline;
+}
+
+.pdf-container {
+    width: 80%;
+    max-width: 900px;
+    height: 135vh;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: rgb(20, 20, 20);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-container object {
+    background-color: white;
+    display: block;
+}
+
+.pdf-container p {
+    color: rgb(179, 179, 179);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.pdf-container a {
+    color: rgba(132, 176, 103);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+    .resume-header {
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    .resume-container {
+        padding: 20px 0 40px;
+    }
+    
+    .pdf-container {
+        width: 90%;
+        height: 80vh;
+    }
+}
+
+/* For very tall screens */
+@media only screen and (min-height: 1000px) {
+    .pdf-container {
+        height: 88vh;
+    }
+}
+
+/* For shorter screens */
+@media only screen and (max-height: 700px) {
+    .pdf-container {
+        height: 78vh;
+    }
 }

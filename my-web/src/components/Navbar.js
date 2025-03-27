@@ -40,19 +40,39 @@ export default class Navbar extends React.Component {
   }
 
   render() {
+    const navbarStyle = {
+      background: 'linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(35, 35, 35) 100%)',
+      height: '80px'
+    };
+    
+    // Mobile menu style
+    const mobileMenuStyle = {
+      top: '80px',
+      background: '#242222'
+    };
+
     return (
-      <nav className='navbar'>
+      <nav className='navbar' style={navbarStyle}>
         <div className='navbar-container'>
 
           <Link to='/' className='navbar-logo' onClick={this.closeMobileMenu}>
-            <img width="55" height="55" src='asset/images/stamp_logo.png' alt='stamp logo'/>
+            <img 
+              width="55" 
+              height="55" 
+              src='asset/images/stamp_logo.png' 
+              alt='stamp logo'
+            />
           </Link>
 
           <div className='menu-icon' onClick={this.handleClick}>
-            <i className = {this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
+            <i className={this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
           </div>
 
-          <ul className={this.state.click ? 'nav-menu active' : 'nav-menu'} onClick={this.closeMobileMenu}>
+          <ul 
+            className={this.state.click ? 'nav-menu active' : 'nav-menu'} 
+            onClick={this.closeMobileMenu}
+            style={this.state.click ? mobileMenuStyle : {}}
+          >
 
             <li className='nav-item'>
               <Link 
