@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import '../App.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -8,6 +8,12 @@ import Footer from '../components/Footer';
 import { Button } from '../components/Button';
 
 function Home() {
+  const [showVisitorMap, setShowVisitorMap] = useState(false);
+
+  const toggleVisitorMap = () => {
+    setShowVisitorMap(!showVisitorMap);
+  };
+
   useEffect(() => {
     // Observer for when elements enter/exit the viewport
     const observer = new IntersectionObserver((entries) => {
@@ -76,7 +82,7 @@ function Home() {
         <div className="profile-section">
 
           <div className="profile-photo">
-            <img src="/asset/images/profile_photo.jpeg" alt="My Profile Photo" />
+            <img src="/asset/images/IMG_7594.jpg" alt="My Profile Photo" />
           </div>
 
           <div className="profile-text">
@@ -126,11 +132,11 @@ function Home() {
                 <i className='fa-brands fa-orcid' />
               </a>
           </div>
-          <div className='tagline'>"Computing a sustainable future, spatially"</div>
+          <div className='tagline'>\\spatial data\\ \\sustainable future\\</div>
             <p> I am a master's student at the University of Washington, where I also earned my undergraduate degree in Computer Science with a minor in Environmental Studies. <i>I am currently open to PhD opportunities starting in 2026.</i></p>
-            <p> I am dedicated to investigating how emerging technologies, such as AI and XR, influence human behavior and seeking innovative ways to guide their development. My goal is to ensure these technologies contribute to building a just society, where seven generations beyond us can thrive both physically and spiritually. </p>
+            <p> I am dedicated to investigating how emerging spatial technologies, such as VLM and XR, influence the way we perceive our environment and carry out daily tasks. My goal is to empower people through these technologies to build a just society where seven generations beyond us can thrive, both physically and spiritually. </p>
             <p> I am currently affiliated with the <a href='https://realitylab.uw.edu/'>UW Reality Lab</a> (Student Researcher), <a href='https://makeabilitylab.cs.washington.edu/'>Makeability Lab</a> (Student Researcher), <a href='https://www.instagram.com/uw_xra/'>Extended Reality Association</a> (President), and <a href='https://csf.uw.edu/'>Campus Sustainability Fund</a> (Grant & Project Coordinator). I have previously worked for the Climate Risk Lab and the King County Department of Natural Resources and Parks.</p>
-            <p> In my spare time, I enjoy reading<span>&#128218;</span>, writing<span>&#9997;</span>, cycling<span>&#128692;</span>, and sailing<span>&#9973;</span>.</p>
+            <p> _20% reading _10% writing _65% cycling _5% sailing</p>
           </div>
         </div>
 
@@ -138,8 +144,8 @@ function Home() {
         <div className='text-line'>
           <h1>Publications</h1>
           <ul>
-            <li>Extended Reality and Environmental Communication: A Literature Review [Upcoming]</li>
             <li>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation [<a href='https://svd-keyframe-interpolation.github.io/'>Link</a>, ICLR 2025]</li>
+            <li>Extended Reality and Environmental Communication: A Literature Review [Upcoming]</li>
           </ul>
         </div>
       </div>
@@ -148,10 +154,12 @@ function Home() {
         <div className='text-line'>
           <h1>Conferences</h1>
           <ul>
-            <li><b>Session Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025 </li>
-            <li><b>Session Speaker</b>: The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>
-            <li><b>VR Theater</b>: SIGGRAPH 2024</li>
             <li><b>Panel Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2024</li>
+            <li><b>Student Volunteer</b>: AWE 2024</li>
+            <li><b>VR Theater</b>: SIGGRAPH 2024</li>
+            <li><b>Session Speaker</b>: The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>
+            <li><b>Session Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025 </li>
+            <li><b>Next Stop</b>: SIGGRAPH 2025</li>
           </ul>
         </div>
       </div>
@@ -187,7 +195,15 @@ function Home() {
       </div>
     </div>
     </div>
-      <Footer />
+      <Footer toggleVisitorMap={toggleVisitorMap} />
+      {showVisitorMap && (
+        <div style={{ textAlign: 'right' }}>
+          <a href='https://mapmyvisitors.com/web/1by8m' title='Visit tracker'>
+            <img src='https://mapmyvisitors.com/map.png?cl=0e1633&w=255&t=tt&d=KYawSvUri0xviH0XUuFXADAU5jT8Jz6CcEo2-YUIe20&co=0b4975&ct=cdd4d9'/>
+          </a>
+        </div>
+      )}
+
     </>
   );
 }

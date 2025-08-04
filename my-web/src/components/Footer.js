@@ -4,12 +4,23 @@ import { Link } from 'react-router-dom';
 
 // footer information that display at the bottom of the page
 // maybe consider adding a last updated date later
-const Footer = () => {
+const Footer = ({ toggleVisitorMap }) => {
   return (
     <footer className="footer">
       <div className="copyright">
         <p>&copy; {new Date().getFullYear()} Boe Zhou. All rights reserved.</p>
-        <p>Made with <span className='love'>&#128153;&#128154;&#128156;</span> in Seattle</p>
+        <p>
+          No Artificial Dyes
+          {toggleVisitorMap && (
+            <span 
+              onClick={toggleVisitorMap}
+              className="hidden-button"
+              title="Toggle visitor map"
+            >
+              .
+            </span>
+          )}
+        </p>
       </div>
     </footer>
   );

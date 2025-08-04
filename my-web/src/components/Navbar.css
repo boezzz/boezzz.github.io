@@ -1,8 +1,9 @@
 .navbar {
+    background: var(--background-color-dark);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -19,12 +20,12 @@
 }
 
 .navbar-logo {
-    color: #fff;
+    color: var(--text-color-primary);
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
@@ -39,17 +40,17 @@
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 60vw;
+    width: 80%;
     justify-content: end;
     margin-right: 2rem;
 }
 
 .nav-item {
-    height: 80px;
+    height: 40px;
 }
 
 .nav-links {
-    color: #fff;
+    color: var(--text-color-primary);
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -65,19 +66,16 @@
     bottom: 0;
     left: 0;
     width: 0%;
-    height: 4px;
-    background: linear-gradient(90deg, rgba(132, 176, 103, 0.8), rgba(255, 255, 255, 0.8));
-    transition: width 0.4s ease-out;
-    border-radius: 2px;
+    height: 2px;
+    background: var(--text-color-primary);
 }
 
 .nav-links:hover::before {
     width: 100%;
-    box-shadow: 0 0 10px rgba(132, 176, 103, 0.5);
 }
 
 .fa-bars {
-    color: #fff;
+    color: var(--text-color-primary);
 }
 
 .nav-links-mobile {
@@ -107,6 +105,7 @@
     }
 
     .nav-menu.active {
+        background: var(--background-color-mobile-menu);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -114,7 +113,7 @@
     }
 
     .nav-links {
-        font-size: 2rem;
+        font-size: 1.6rem;
         text-align: center;
         padding: 2rem;
         width: 100%;
@@ -122,8 +121,8 @@
     }
 
     .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
+        background-color: var(--background-color-white);
+        color: var(--text-color-light);
         border-radius: 0;
     }
 
@@ -153,8 +152,8 @@
     }
 
     .fa-xmark {
-        color: #fff;
-        font-size: 2rem;
+        color: var(--text-color-primary);
+        font-size: 1.6rem;
     }
 
     .nav-links-mobile {
@@ -164,17 +163,17 @@
         border-radius: 4px;
         width: 80%;
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         background-color: transparent;
-        color: #fff;
+        color: var(--text-color-primary);
         padding: 14px 20px;
-        border: 1px solid #fff;
+        border: 1px solid var(--text-color-primary);
         transition: all 0.3s ease-out;
     }
 
     .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
+        background: var(--background-color-white);
+        color: var(--text-color-light);
         transition: 250ms;
     }
 }

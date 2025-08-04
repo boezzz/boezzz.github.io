@@ -1,6 +1,6 @@
 .footer {
-    background: rgb(12, 12, 12);
-    color: #fff;
+    background: var(--background-color-dark);
+    color: var(--text-color-light);
     padding: 40px 0 20px;
   }
   
@@ -20,7 +20,7 @@
   .footer-section h3 {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: rgba(132, 176, 103);
+    color: var(--primary-color);
   }
   
   .footer-section p {
@@ -40,21 +40,43 @@
   }
   
   .social-icons a {
-    color: #fff;
+    color: var(--text-color-light);
     font-size: 1.5rem;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: rgba(132, 176, 103);
+    color: var(--primary-color);
   }
   
   .copyright {
     text-align: center;
     margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border-color-light);
     font-size: 0.9rem;
+  }
+
+  .hidden-button {
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    transition: all 0.3s ease;
+    padding: 2px 4px;
+    margin-left: 2px;
+    border-radius: 2px;
+    display: inline-block;
+    user-select: none;
+  }
+
+  .hidden-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color, #61dafb);
+    transform: scale(1.2);
+  }
+
+  .hidden-button:active {
+    transform: scale(0.9);
   }
   
   @media screen and (max-width: 960px) {

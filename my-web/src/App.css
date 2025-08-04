@@ -2,21 +2,61 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Space Mono', monospace;
-    color-scheme: dark;
+    font-family: var(--font-primary);
+    color-scheme: light;
   }
   
   :root {
-    --primary-color: rgba(132, 176, 103);
-    --text-color: rgb(179, 179, 179);
-    --background-color: rgb(12, 12, 12);
-    --section-spacing: 80px;
-    --element-spacing: 20px;
+    /* Fonts */
+    --font-primary: 'Fragment Mono', monospace;
+    --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-code: 'Courier New', monospace;
+    --font-chinese: "Noto Serif SC", serif;
+    --font-handwriting: "Shadows Into Light", serif;
+    --font-pixel: "Press Start 2P", serif;
+
+    /* Colors */
+    --primary-color: rgb(74, 125, 41);
+    --primary-color-light: rgba(74, 125, 41, 0.9);
+    --primary-color-medium: rgba(74, 125, 41, 0.8);
+    --primary-color-translucent: rgba(74, 125, 41, 0.5);
+    --primary-color-transparent: rgba(74, 125, 41, 0.4);
+  
+    --text-color-primary: rgb(30, 30, 30);
+    --text-color-secondary: rgb(80, 80, 80);
+    --text-color-light: #f5f5f5;
+    --text-color-light-transparent-80: rgba(245, 245, 245, 0.8);
+    --text-color-light-transparent-90: rgba(245, 245, 245, 0.9);
+    --text-color-dark: #242424;
+  
+    --background-color-dark: #f5f5f5;
+    --background-color-light: #fafafa;
+    --background-color-light-transparent: rgba(245, 245, 245, 0.8);
+    --background-color-white: #ffffff;
+    --background-color-navbar-end: #f5f5f5;
+    --background-color-mobile-menu: #fafafa;
+    
+    --border-color-light: rgba(0, 0, 0, 0.1);
+  
+    --grey-light: #999;
+    
+    --shadow-color-dark-1: rgba(0, 0, 0, 0.1);
+    --shadow-color-dark-2: rgba(0, 0, 0, 0.15);
+    --shadow-color-dark-3: rgba(0, 0, 0, 0.2);
+  
+    --gradient-grey: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
+    --gradient-primary-light: linear-gradient(90deg, rgba(74, 125, 41, 0.8), rgba(74, 125, 41, 0.6));
+    --gradient-dark: linear-gradient(40deg, #f0f0f0 0%, #e0e0e0 100%);
+    --gradient-transparent-light: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
+    --gradient-navbar: linear-gradient(90deg, var(--background-color-dark) 0%, var(--background-color-navbar-end) 100%);
+
+    --section-spacing: 60px;
+    --element-spacing: 15px;
   }
   
   body {
-    background-color: var(--background-color);
-    line-height: 1.6;
+    background-color: var(--background-color-dark);
+    line-height: 1.4;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -26,7 +66,7 @@
   
   p {
     margin-bottom: var(--element-spacing);
-    color: var(--text-color);
+    color: var(--text-color-primary);
   }
   
   a {
@@ -68,7 +108,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: var(--text-color-light);
     font-size: 100px;
   }
   
@@ -76,7 +116,7 @@
     background-position: center;
     background-size: fill;
     background-repeat: no-repeat;
-    color: #fff;
+    color: var(--text-color-light);
     font-size: 100px;
   }
   
@@ -84,6 +124,6 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: #fff;
+    color: var(--text-color-light);
     font-size: 100px;
   } */

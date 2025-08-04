@@ -3,7 +3,7 @@
 .hidden-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--background-color-dark);
     min-height: 100vh;
   }
   
@@ -23,7 +23,7 @@
     }
   }
   .text-container {
-    color: rgb(100, 100, 100);
+    color: var(--text-color-secondary);
     padding: 1rem;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -32,18 +32,18 @@
   .text-line {
     margin-top: 75px;
     font-size: 46px;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-code);
   }
 
   .text-highlight {
     font-size: 48px;
-    color: white;
+    color: var(--text-color-light);
   }
   
   /* Styles for medium and larger screens */
   @media (min-width: 960px) {
     .hidden-container {
-      background-color: rgb(12, 12, 12);
+      background-color: var(--background-color-dark);
       flex-direction: row;
       min-height: 100vh;
     }
@@ -59,7 +59,7 @@
     }
 
     .text-container {
-      color: rgb(100, 100, 100);
+      color: var(--text-color-secondary);
       padding: 0rem;
       margin-top: 100px;
       margin-bottom: 100px;

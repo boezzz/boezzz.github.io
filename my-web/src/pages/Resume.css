@@ -1,7 +1,7 @@
 .resume-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--background-color-dark);
     align-items: center;
     width: 100%;
     min-height: 90vh;
@@ -20,7 +20,7 @@
 
 
 .download-link {
-    color: rgba(132, 176, 103, 0.8);
+    color: var(--primary-color-medium);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 400;
@@ -35,7 +35,7 @@
 }
 
 .download-link:hover {
-    color: rgba(132, 176, 103, 1);
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
@@ -45,24 +45,24 @@
     height: 135vh;
     border-radius: 4px;
     overflow: hidden;
-    background-color: rgb(20, 20, 20);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-color-light);
+    box-shadow: 0 4px 15px var(--shadow-color-dark-2);
 }
 
 .pdf-container object {
-    background-color: white;
+    background-color: var(--background-color-white);
     display: block;
 }
 
 .pdf-container p {
-    color: rgb(179, 179, 179);
+    color: var(--text-color-primary);
     padding: 20px;
     text-align: center;
     font-size: 1.1rem;
 }
 
 .pdf-container a {
-    color: rgba(132, 176, 103);
+    color: var(--primary-color);
     text-decoration: underline;
     margin-left: 5px;
 }

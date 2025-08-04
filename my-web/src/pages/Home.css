@@ -3,7 +3,7 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(12, 12, 12);
+    background-color: var(--background-color-dark);
     align-items: center;
     padding-top: 40px;
 }
@@ -20,6 +20,7 @@
 .profile-photo {
   width: 30%;
   height: auto;
+  padding-top: 8rem;
 }
 
 .profile-photo img{
@@ -43,9 +44,9 @@
 
 .profile-text h1 {
   margin: 0;
-  font-size: 2.5rem;
-  color: rgb(179, 179, 179);
-  line-height: 1.2;
+  font-size: 1.5rem;
+  color: var(--text-color-primary);
+  line-height: 1.7;
 }
 
 .profile-text h1:first-child {
@@ -53,56 +54,42 @@
 }
 
 .profile-text .englishname {
-  color: rgba(132, 176, 103);
+  color: var(--primary-color);
   letter-spacing: 0.5px;
 }
 
 .profile-text .chinesename {
-  color: rgba(132, 176, 103);
-  font-family: "Zhi Mang Xing", serif;
+  color: var(--primary-color);
+  font-family: var(--font-chinese);
   font-weight: 300;
-  font-size: 2.7rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 14px;
 }
 
 .profile-text p {
   margin: 25px 0 0;
-  font-size: 1.2rem;
-  color: rgb(179, 179, 179);
-  line-height: 1.6;
+  font-size: 0.9rem;
+  color: var(--text-color-primary);
+  line-height: 1.4;
   font-weight: 300;
   text-align: left;
 }
 
 .profile-text .tagline {
   font-size: 1.5rem;
-  font-family: "Shadows Into Light", serif;
-  color: rgba(132, 176, 103, 0.9);
+  font-family: var(--font-primary);
+  color: var(--primary-color);
   display: block;
   text-align: right;
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
-  font-style: italic;
-}
-
-.profile-text .tagline::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, rgba(179, 179, 179, 0.2) 0%, rgba(160, 161, 159, 0.7) 100%);
-  margin-top: 14px;
-  padding-bottom: 2px;
-  position: relative;
-  border-radius: 2px;
-  overflow: hidden;
-  animation: shimmer 2.5s infinite;
-  animation-delay: 0.5s;
+  font-style: normal;
 }
 
 .profile-text a {
-  color: rgba(132, 176, 103);
+  color: var(--primary-color);
 }
 
 .social-links {
@@ -112,8 +99,8 @@
 
 .social-links a {
   margin: 0 10px 0 0;
-  color: rgb(179, 179, 179);
-  font-size: 2.3rem;
+  color: var(--text-color-primary);
+  font-size: 1.6rem;
   transition: all 0.3s ease;
 }
 
@@ -122,9 +109,7 @@
 }
 
 .social-links a:hover {
-  color: rgba(132, 176, 103);
-  transform: translateY(-5px);
-  text-shadow: 0 5px 15px rgba(132, 176, 103, 0.4);
+  color: var(--primary-color);
 }
 
 .text-section {
@@ -135,73 +120,41 @@
 }
 
 .text-section a {
-  color: rgba(132, 176, 103);
+  color: var(--primary-color);
 }
 
 .text-section b {
-  color: rgba(132, 176, 103);
+  color: var(--primary-color);
 }
 
 .text-line {
   margin: 0 auto;
   width: 80%;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 .text-line h1{
-  font-size: 2.5rem;
-  color: rgba(132, 176, 103);
-  padding-left: 15px;
+  font-size: 1.5rem;
+  color: var(--primary-color);
   margin-bottom: 20px;
   position: relative;
 }
 
-.text-line h1.animate::after {
-  animation-play-state: running;
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.text-line h1::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  background-size: 200% 100%;
-  animation: shimmer 2.5s infinite;
-  animation-play-state: paused;
-  pointer-events: none;
-}
-
-.text-line h1.animate::before {
-  animation-play-state: running;
-}
-
 .text-line ul{
   list-style-position: inside;
-  list-style-type: "- ";
+  list-style-type: "* ";
 }
 
 .milestone ul{
   list-style-position: inside;
-  list-style-type: "🌱 ";
+  list-style-type: "> ";
 }
 
 .text-line li{
-  margin: 20px 0;
-  font-size: 1.2rem;
-  color: rgb(179, 179, 179);
-  line-height: 1.6;
+  margin: 25px 0;
+  font-size: 0.9rem;
+  color: var(--text-color-primary);
+  line-height: 1.4;
 }
 
 /* waving animation */
@@ -232,21 +185,21 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 0 1000px var(--shadow-color-dark-1);
   object-fit: contain;
 }
 
 .hero-container > h1 {
-  color: rgba(132, 176, 103);
-  font-size: 100px;
+  color: var(--text-color-light-transparent-80);
+  font-size: 80px;
   margin-left: 1vw;
   margin-top: 50px;
 }
 
 .hero-container > p {
   margin-top: 8px;
-  color: rgba(255, 255, 255, 0.80);
-  font-size: 32px;
+  color: var(--text-color-light-transparent-80);
+  font-size: 28px;
 }
 
 .hero-btns {
@@ -278,6 +231,7 @@
       max-width: 300px;
       height: auto;
       margin-bottom: 20px;
+      padding-top: 0rem;
     }
 
     .profile-text {
@@ -295,7 +249,7 @@
 
     .profile-text h1 {
       margin: 0 0 5px;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
       text-align: center;
     }
     
@@ -304,12 +258,12 @@
     }
     
     .profile-text .chinesename {
-      font-size: 2rem;
+      font-size: 1.2rem;
       margin-bottom: 10px;
     }
     
     .profile-text .tagline {
-      font-size: 1.3rem;
+      font-size: 1rem;
       text-align: center;
       margin: 0 0 12px;
     }
@@ -325,7 +279,7 @@
 
     .social-links a {
       margin: 0 12px;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     .text-section {
@@ -339,8 +293,8 @@
     }
 
     .text-line h1{
-      font-size: 1.8rem;
-      color: rgba(132, 176, 103);
+      font-size: 1.6rem;
+      color: var(--primary-color);
       margin-bottom: 15px;
     }
 
@@ -351,11 +305,11 @@
 
     .text-line li {
       margin: 15px 0;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .hero-container > h1 {
-      font-size: 50px;
+      font-size: 40px;
       margin-top: 20px;
       padding: 0 20px;
     }
@@ -377,9 +331,9 @@
 
 .bio-text p {
   margin: 16px 0 0;
-  font-size: 1.2rem;
-  color: rgb(179, 179, 179);
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--text-color-primary);
+  line-height: 1.4;
   font-weight: 300;
   text-align: left;
 }
