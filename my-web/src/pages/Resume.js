@@ -12,6 +12,9 @@ function Resume() {
     window.scrollTo(0, 0);
   }, []);
 
+  // Detect if mobile device for better PDF handling
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
     <>
       <Navbar />
@@ -19,7 +22,7 @@ function Resume() {
       <div className='resume-container'>
         <div className='resume-header'>
           <a 
-            href="/asset/resume_maq_442024.pdf" 
+            href="/asset/resume.pdf" 
             download="BoeZhouResume.pdf"
             className="download-link"
           >
@@ -27,17 +30,40 @@ function Resume() {
           </a>
         </div>
         <div className='pdf-container'>
-          <object
-            data="/asset/resume_maq_442024.pdf#toolbar=0"
-            type="application/pdf"
-            width="100%"
-            height="100%"
-          >
-            <p>
-              It appears your browser doesn't support embedded PDFs.
-              <a href="/asset/resume_siggraph_24_v0.pdf">Click here to download the PDF instead.</a>
-            </p>
-          </object>
+          {isMobile ? (
+            // Use iframe for better mobile compatibility
+            <iframe
+              src="/asset/resume.pdf"
+              title="Resume PDF"
+              width="100%"
+              height="100%"
+              style={{ border: 'none' }}
+            >
+              <p>
+                It appears your browser doesn't support embedded PDFs.
+                <a href="/asset/resume.pdf">Click here to download the PDF instead.</a>
+              </p>
+            </iframe>
+          ) : (
+            // Use object tag for desktop
+            <object
+              data="/asset/resume.pdf#toolbar=0"
+              type="application/pdf"
+              width="100%"
+              height="100%"
+            >
+              <embed
+                src="/asset/resume.pdf#toolbar=0"
+                type="application/pdf"
+                width="100%"
+                height="100%"
+              />
+              <p>
+                It appears your browser doesn't support embedded PDFs.
+                <a href="/asset/resume.pdf">Click here to download the PDF instead.</a>
+              </p>
+            </object>
+          )}
         </div>
       </div>
 

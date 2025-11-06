@@ -22,6 +22,8 @@ import FridayHarbor from './pages/blog_pages/friday_harbor';
 import XRCooking from './pages/blog_pages/XR_cooking';
 import ARESI from './pages/blog_pages/AR_esi';
 import VR6DOF from './pages/blog_pages/vr_6dof';
+import RidewithgpsMcp from './pages/blog_pages/RidewithgpsMcp';
+import SoArm100 from './pages/blog_pages/SoArm100';
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -90,6 +92,14 @@ const router = createHashRouter([
       {
         path: "/vr-6dof",
         element: <VR6DOF />,
+      },
+      {
+        path: "/ridewithgps-mcp",
+        element: <RidewithgpsMcp />,
+      },
+      {
+        path: "/so-arm100",
+        element: <SoArm100 />,
       },
     ],
   },

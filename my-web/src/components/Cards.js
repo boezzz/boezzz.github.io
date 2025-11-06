@@ -14,10 +14,24 @@ function Cards() {
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
+              src='asset/images/ridewithgps-mcp.jpeg'
+              text='RideWithGPS MCP: AI + Cycling'
+              path='/ridewithgps-mcp'
+              tag={['AI', 'Open Source']}
+              date='July 2025'
+            />
+            <CardItem
+              src='asset/images/base_anchor.jpg'
+              text='Play Around SO-ARM100: using XR to control a robot arm'
+              path='/so-arm100'
+              tag={['Robotics', 'XR']}
+              date='May 2025'
+            />
+            <CardItem
               src='asset/images/forest_first_frame.jpeg'
               text='Online Immersive Content Viewer'
               path='/vr-6dof'
-              tag={['XR']}
+              tag={['XR', 'Open Source']}
               date='March 2025'
             />
             <CardItem
