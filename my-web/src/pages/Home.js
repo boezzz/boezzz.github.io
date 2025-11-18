@@ -82,7 +82,7 @@ function Home() {
         <div className="profile-section">
 
           <div className="profile-photo">
-            <img src="/asset/images/IMG_7594.jpg" alt="Boe Zhou" />
+            <img src="/asset/images/profile_photo.jpeg" alt="Boe Zhou" />
           </div>
 
           <div className="profile-text">
@@ -132,8 +132,8 @@ function Home() {
                 <i className='fa-brands fa-orcid' />
               </a>
           </div>
-          <div className='tagline'>\\visual computing\\ \\sustainable future\\</div>
-          <div className='tagline'>\\application-driven ML\\</div>
+          <div className='tagline'>\\visual computing\\ \\environment\\</div>
+          <div className='tagline'>\\HCI\\ \\application-driven ML\\</div>
             <p> I am a master's student at the University of Washington, where I also earned my undergraduate degree in Computer Science with a minor in Environmental Studies. <i>I am currently open to PhD opportunities starting in 2026.</i></p>
             <p> I investigate how visual computing shapes perceptions of the natural environment and drives environmental decision-making. I aim to empower at-risk communities by deploying interpretable, accessible visual tools that support resilient stewardship for generations to come. </p>
             <p> I am currently affiliated with the <a href='https://makeabilitylab.cs.washington.edu/'>Makeability Lab</a> (Student Researcher) and <a href='https://realitylab.uw.edu/'>UW Reality Lab</a> (Student Researcher). 
