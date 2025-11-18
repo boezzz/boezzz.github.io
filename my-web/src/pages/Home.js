@@ -86,57 +86,73 @@ function Home() {
 
         <div className="profile-section">
 
-          <div className="profile-photo">
-            <img src="/asset/images/profile_photo.jpeg" alt="Boe Zhou" />
+          <div className="profile-left">
+            <div className="profile-photo">
+              <img src="/asset/images/profile_photo.jpeg" alt="A man, Boyang Zhou, holding a camera in a pacific norrthwest forest" />
+            </div>
+            <div className="contact-info">
+              <div className="contact-item">
+                <i className='fa-solid fa-envelope' />
+                <a href="mailto:zby2003@cs.washington.edu">
+                  Email
+                  </a>
+              </div>
+              <div className="contact-item">
+                <i className='fa-brands fa-linkedin' />
+                <a
+                  href="https://www.linkedin.com/in/zby2003/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </div>
+              <div className="contact-item">
+                <i className='fa-brands fa-github' />
+                <a
+                  href="https://github.com/boezzz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+              <div className="contact-item">
+                <i className='fa-brands fa-x-twitter' />
+                <a
+                  href="https://x.com/boe_xr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X
+                </a>
+              </div>
+              <div className="contact-item">
+                <i className='fa-brands fa-bluesky' />
+                <a
+                  href="https://bsky.app/profile/boyzhou.bsky.social"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Bluesky
+                </a>
+              </div>
+              <div className="contact-item">
+                <i className='fa-brands fa-google-scholar' />
+                <a
+                  href="https://scholar.google.com/citations?user=vOhAfyEAAAAJ&hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Scholar
+                </a>
+              </div>
+            </div>
           </div>
 
           <div className="profile-text">
             <h1><span className="englishname">Boyang 'Boe' Zhou</span></h1>
             <h1><span className='chinesename'>周博洋</span></h1>
-            <div className="social-links">
-              <a
-                href="https://www.linkedin.com/in/zby2003/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-linkedin' />
-              </a>
-              <a
-                href="https://github.com/boezzz"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-github' />
-              </a>
-              <a
-                href="https://x.com/boe_xr"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-x-twitter' />
-              </a>
-              <a
-                href="https://bsky.app/profile/boyzhou.bsky.social"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-bluesky' />
-              </a>
-              <a
-                href="https://scholar.google.com/citations?user=vOhAfyEAAAAJ&hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-google-scholar' />
-              </a>
-              {/* <a
-                href="https://orcid.org/0009-0004-1774-4345"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className='fa-brands fa-orcid' />
-              </a> */}
-          </div>
           <div className='tagline'>\\visual computing\\ \\environment\\</div>
           <div className='tagline'>\\HCI\\ \\application-driven ML\\</div>
             <p> I am a master's student at the University of Washington, where I also earned my undergraduate degree in Computer Science with a minor in Environmental Studies. <i>I am currently open to PhD opportunities starting in 2026.</i></p>

@@ -10,7 +10,7 @@ const Footer = ({ toggleVisitorMap }) => {
       <div className="copyright">
         <p>&copy; {new Date().getFullYear()} Boyang Zhou</p>
         <p>
-          No Artificial Dyes
+           No Artificial Dyes
           {toggleVisitorMap && (
             <span 
               onClick={toggleVisitorMap}

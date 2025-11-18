@@ -17,17 +17,69 @@
   margin-bottom: 40px;
 }
 
+.profile-left {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .profile-photo {
-  width: 30%;
+  width: 70%;
   height: auto;
-  padding-top: 8rem;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .profile-photo img {
   max-width: 100%;
   max-height: 100%;
-  mix-blend-mode: multiply;
-  filter: contrast(105%);
+  display: block;
+  filter: contrast(85%) brightness(95%) saturate(75%);
+}
+
+.profile-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.contact-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.contact-item i {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--text-color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--primary-color);
 }
 
 .profile-text {
@@ -91,26 +143,6 @@
 }
 
 .profile-text a {
-  color: var(--primary-color);
-}
-
-.social-links {
-  margin: 20px 0 25px;
-  text-align: right;
-}
-
-.social-links a {
-  margin: 0 10px 0 0;
-  color: var(--text-color-primary);
-  font-size: 1.6rem;
-  transition: all 0.3s ease;
-}
-
-.social-links a:last-child {
-  margin-right: 0;
-}
-
-.social-links a:hover {
   color: var(--primary-color);
 }
 
@@ -227,12 +259,20 @@
       align-items: center;
     }
 
-    .profile-photo {
-      width: 70%;
+    .profile-left {
+      width: 100%;
       max-width: 300px;
-      height: auto;
+      align-items: center;
+    }
+
+    .profile-photo {
+      width: 100%;
       margin-bottom: 20px;
-      padding-top: 0rem;
+    }
+
+    .contact-info {
+      width: 100%;
+      margin-bottom: 20px;
     }
 
     .profile-text {

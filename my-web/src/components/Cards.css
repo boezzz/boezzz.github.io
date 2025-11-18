@@ -94,7 +94,7 @@
   max-height: 100%;
   object-fit: cover;
   mix-blend-mode: multiply;
-  filter: contrast(105%);
+  filter: contrast(90%) brightness(90%) saturate(95%);
 }
 
 .cards__item__info {
