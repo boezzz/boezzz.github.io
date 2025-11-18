@@ -57,18 +57,48 @@ export default class Navbar extends React.Component {
             <i className={this.state.click ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'} />
           </div>
 
-          <ul 
-            className={this.state.click ? 'nav-menu active' : 'nav-menu'} 
+          <ul
+            className={this.state.click ? 'nav-menu active' : 'nav-menu'}
             onClick={this.closeMobileMenu}
           >
 
             <li className='nav-item'>
-              <Link 
-                to='/' 
-                className='nav-links' 
+              <Link
+                to='/'
+                className='nav-links'
                 onClick={this.closeMobileMenu}
               >
                 Home
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/publications'
+                className='nav-links'
+                onClick={this.closeMobileMenu}
+              >
+                Publications
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/research'
+                className='nav-links'
+                onClick={this.closeMobileMenu}
+              >
+                Research
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                to='/projects'
+                className='nav-links'
+                onClick={this.closeMobileMenu}
+              >
+                Projects
               </Link>
             </li>
 
@@ -78,7 +108,7 @@ export default class Navbar extends React.Component {
                 className='nav-links'
                 onClick={this.closeMobileMenu}
               >
-                Blog
+                Blogs
               </Link>
             </li>
 

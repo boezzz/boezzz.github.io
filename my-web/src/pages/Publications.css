@@ -1,0 +1,72 @@
+.publications-container {
+  min-height: 100vh;
+  padding: 120px 80px 80px 80px;
+  background-color: var(--background-color-dark);
+}
+
+.publications-header {
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--primary-color);
+}
+
+.publications-header h1 {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.publications-header p {
+  font-family: var(--font-system);
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+.publications-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .publications-container {
+    padding: 100px 60px 60px 60px;
+  }
+
+  .publications-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .publications-header p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .publications-container {
+    padding: 100px 30px 50px 30px;
+  }
+
+  .publications-header {
+    margin-bottom: 40px;
+  }
+
+  .publications-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .publications-header p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .publications-container {
+    padding: 90px 20px 40px 20px;
+  }
+
+  .publications-header h1 {
+    font-size: 1.3rem;
+  }
+}

@@ -10,6 +10,9 @@ import {
 // Import the pages here
 import NotFoundPage from './pages/NotFoundPage';
 import Home from './pages/Home';
+import Publications from './pages/Publications';
+import Research from './pages/Research';
+import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
 import Resume from './pages/Resume';
 import Hidden from './pages/Hidden';
@@ -52,6 +55,18 @@ const router = createHashRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/publications",
+        element: <Publications />,
+      },
+      {
+        path: "/research",
+        element: <Research />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
       },
       {
         path: "/blog",

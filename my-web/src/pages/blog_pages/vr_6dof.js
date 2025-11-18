@@ -21,7 +21,7 @@ function VR6DOF() {
 
       <article>
       <a href="https://boezzz.com/mono6D">
-          Try out the demo! (full technical report included)
+          Try out the demo! (w/ technical report)
         </a>
 
       <p>6-DOF video, or 6 Degrees of Freedom video, is a media format that allows viewers to control both the position and orientation of the camera, enabling more immersive VR experiences. By leveraging 6-DOF head tracking data from modern VR headsets, users can explore pre-captured content with translational motion, introducing realistic motion parallax. </p>
@@ -37,7 +37,7 @@ function VR6DOF() {
 <p>To tackle these problems, I developed mono6D, an online 6-DOF viewer that takes any 360-degree video captured from a single viewpoint as input and generates a distributable 6-DOF video with motion parallax. mono6D is largely built upon the research led by Ana Serrano in the paper <i>"Motion Parallax for 360° RGBD Video"</i>, which proposes separating monoscopic 360° video into three distinct layers based on depth and disocclusion across frames, with each layer rendered separately during playback (Serrano et al., 2019). Although this method does not achieve high-fidelity, state-of-the-art results and does not incorporate deep learning into its pipeline, it is relatively lightweight and computationally feasible to implement.</p>  
 
         <a href="https://boezzz.com/mono6D">
-          Try out the demo! (full technical report included)
+          Try out the demo! (w/ technical report)
         </a>
       </article>
 

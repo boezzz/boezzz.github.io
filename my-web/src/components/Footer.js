@@ -8,7 +8,7 @@ const Footer = ({ toggleVisitorMap }) => {
   return (
     <footer className="footer">
       <div className="copyright">
-        <p>&copy; {new Date().getFullYear()} Boe Zhou. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Boyang Zhou</p>
         <p>
           No Artificial Dyes
           {toggleVisitorMap && (
@@ -17,7 +17,7 @@ const Footer = ({ toggleVisitorMap }) => {
               className="hidden-button"
               title="Toggle visitor map"
             >
-              .
+            .
             </span>
           )}
         </p>

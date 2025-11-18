@@ -9,9 +9,14 @@ import { Button } from '../components/Button';
 
 function Home() {
   const [showVisitorMap, setShowVisitorMap] = useState(false);
+  const [showAllNews, setShowAllNews] = useState(false);
 
   const toggleVisitorMap = () => {
     setShowVisitorMap(!showVisitorMap);
+  };
+
+  const toggleNews = () => {
+    setShowAllNews(!showAllNews);
   };
 
   useEffect(() => {
@@ -124,13 +129,13 @@ function Home() {
               >
                 <i className='fa-brands fa-google-scholar' />
               </a>
-              <a
+              {/* <a
                 href="https://orcid.org/0009-0004-1774-4345"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className='fa-brands fa-orcid' />
-              </a>
+              </a> */}
           </div>
           <div className='tagline'>\\visual computing\\ \\environment\\</div>
           <div className='tagline'>\\HCI\\ \\application-driven ML\\</div>
@@ -144,47 +149,51 @@ function Home() {
 
       <div className='text-section'>
         <div className='text-line'>
-          <h1>Publications</h1>
-          <ul>
-            <li>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation [<a href='https://svd-keyframe-interpolation.github.io/'>Link</a>, ICLR 2025]</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className='text-section'>
-        <div className='text-line'>
-          <h1>Conferences</h1>
-          <ul>
-            <li><b>Panel Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2024</li>
-            <li><b>Student Volunteer</b>: AWE 2024</li>
-            <li><b>VR Theater student volunteer</b>: SIGGRAPH 2024</li>
-            <li><b>Session Speaker</b>: The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>
-            <li><b>Session Speaker</b>: The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025 </li>
-            <li><b>Attendee</b>: SIGGRAPH 2025</li>
-          </ul>
+          <a href='#/publications' style={{ color: 'var(--primary-color)', textDecoration: 'none' }}><h1>Publications <i className='fa-solid fa-arrow-up-right-from-square'></i></h1></a>
         </div>
       </div>
 
       <div className='text-section'>
         <div className='text-line milestone'>
-          <h1>Footsteps</h1>
+          <h1>News</h1>
           <ul>
-            {/* <li>Summer 2021: moved to the US from Nanjing, China. began my journey at UW</li>
-            <li>Summer 2022: taught CS at iDTech Camp</li> */}
-            <li>Fall 2022: started to work on my first XR research project—MR-assisted Epidural Steroid Injection; revived the <a href='https://xra-uw.github.io/uw-xra-site/#/'>student XR club</a></li>
-            {/* <li>Winter 2023: with the rise of generative AI, began to think about "what I want from technology", not "technology I want"</li>
-            <li>Spring 2023: found my answer through environmental philosophy classes and a couple of on-campus sustainability-related projects</li> */}
-            <li>Summer 2023: joined the <a href='https://csf.uw.edu/'>Campus Sustainability Fund</a> and began to study environmental issues systematically</li>
-            {/* <li>Summer 2024: tried working for the government to influence policy change from the top down, and realized it's not my thing. In the end, I am still a geek</li> */}
-            <li>Winter 2025: first paper published to ICLR [<a href='https://svd-keyframe-interpolation.github.io/'>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation</a>]</li>
-            <li>Winter 2025: received my undergraduate degree from UW</li>
-            <li>Fall 2025: TA for CS557 graduate level computer graphics course taught by Prof. <a href='http://www.gilbertbernstein.com/'>Gilbert Bernstein</a></li>
+            <li>9/2025: TA for CS557 graduate level computer graphics course taught by Prof. Gilbert Bernstein</li>
+            <li>8/2025: SIGGRAPH 2025</li>
+            <li>3/2025: Speaking for the second time at The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025</li>
+            <li>3/2025: Received my undergraduate degree from UW</li>
+            <li>12/2024: Wrapped up my Internship at the King County Department of Natural Resources and Parks</li>
+            <li>12/2024: Paper published to ICLR [<a href='https://svd-keyframe-interpolation.github.io/'>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation</a>]</li>
+            <li>10/2024: Speaking at The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>
+            <li>8/2024: VR Theater student volunteer at SIGGRAPH 2024</li>
+            <li>6/2024: Student Volunteer at AWE 2024</li>
+            <li>3/2024: Speaking at The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2024</li>
+            {showAllNews && (
+              <>
+                <li>6/2023: Joined the <a href='https://csf.uw.edu/'>Campus Sustainability Fund</a> and began to study environmental issues systematically</li>
+                <li>6/2022: Taught CS at iDTech Camp</li>
+                <li>6/2022: Started to work on my first XR research project—MR-assisted Epidural Steroid Injection; revived the <a href='https://xra-uw.github.io/uw-xra-site/#/'>student XR club at UW</a></li>
+              </>
+            )}
           </ul>
+          <button
+            onClick={toggleNews}
+            style={{
+              background: 'none',
+              border: 'none',
+              color: 'var(--primary-color)',
+              cursor: 'pointer',
+              fontSize: '1rem',
+              marginTop: '10px',
+              textDecoration: 'underline'
+            }}
+          >
+            {showAllNews ? '← Show less' : 'Show more →'}
+          </button>
         </div>
       </div>
       
 
-      <div className='hero-container'>
+      {/* <div className='hero-container'>
       <h1>Looking for some inspirations?</h1>
       <div className='hero-btns'>
         <Button
@@ -195,7 +204,7 @@ function Home() {
         ._Check out my blogs
         </Button>
       </div>
-    </div>
+    </div> */}
     </div>
       <Footer toggleVisitorMap={toggleVisitorMap} />
       {showVisitorMap && (

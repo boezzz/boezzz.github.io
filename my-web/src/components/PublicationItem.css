@@ -1,0 +1,113 @@
+.publication-item {
+  display: flex;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: flex-start;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.publication-item__cover {
+  flex-shrink: 0;
+  width: 250px;
+  height: 160px;
+  overflow: hidden;
+  background-color: var(--background-color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publication-item__cover img,
+.publication-item__cover video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  filter: contrast(105%);
+}
+
+.publication-item__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.publication-item__title {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color-primary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.publication-item__authors {
+  font-family: var(--font-system);
+  font-size: 0.95rem;
+  color: var(--text-color-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.publication-item__venue {
+  font-family: var(--font-system);
+  font-size: 0.95rem;
+  color: #666;
+  margin: 0;
+}
+
+.publication-item__links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.publication-item__links a {
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.publication-item__links a:hover {
+  color: #4a7d29;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .publication-item {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .publication-item__cover {
+    width: 100%;
+    height: 200px;
+  }
+
+  .publication-item__title {
+    font-size: 1.1rem;
+  }
+
+  .publication-item__authors,
+  .publication-item__venue {
+    font-size: 0.9rem;
+  }
+
+  .publication-item__links {
+    gap: 10px;
+  }
+
+  .publication-item__links a {
+    font-size: 0.85rem;
+  }
+}

@@ -1,32 +1,24 @@
-import React, { useEffect } from 'react';
-import '../App.css';
-import './Blogs.css';
+import React from 'react';
+import './Projects.css';
 import '../components/Cards.css';
-
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CardItem from '../components/CardItem';
-import blogsData from '../data/blogs';
+import projectsData from '../data/projects';
 
-function Blogs() {
-  useEffect(() => {
-    // Set page title and scroll to top when component mounts
-    document.title = "Boe's Blog | Thoughts on Technology & Sustainability";
-    window.scrollTo(0, 0);
-  }, []);
-
+function Projects() {
   return (
     <>
       <Navbar />
-      <div className='blogs-container'>
+      <div className='projects-container'>
         <div className='cards__header'>
-          <h1>Blogs</h1>
+          <h1>Projects</h1>
         </div>
 
         <div className='cards__container'>
           <div className='cards__wrapper'>
             <ul className='cards__items'>
-              {blogsData.map((item) => (
+              {projectsData.map((item) => (
                 <CardItem
                   key={item.id}
                   src={item.src}
@@ -45,4 +37,4 @@ function Blogs() {
   );
 }
 
-export default Blogs;
+export default Projects;
