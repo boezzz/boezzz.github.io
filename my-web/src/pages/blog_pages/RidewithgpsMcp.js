@@ -4,7 +4,9 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getProjectById } from '../../data/projects';
 
+const projectData = getProjectById('ridewithgps-mcp');
 
 function RidewithgpsMcp() {
   return (
@@ -12,8 +14,9 @@ function RidewithgpsMcp() {
       <Navbar />
 
       <div className='title'>
-        <h1>RideWithGPS MCP: AI-Powered Cycling Companion</h1>
-        <h3>July 2025</h3>
+        <h1>{projectData.title}</h1>
+        {projectData.subtitle && <h3>{projectData.subtitle}</h3>}
+        <h3>{projectData.date}</h3>
       </div>
 
         <article>

@@ -4,15 +4,17 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getProjectById } from '../../data/projects';
 
+const projectData = getProjectById('forward-to-past');
 
 function Forward_to_past() {
   return (
     <>
       <Navbar />
         <div className='title'>
-          <h1>Teaching history through conversation</h1>
-          <h3>In collaboration with Rylan Pozniak Daniels</h3>
+          <h1>{projectData.title}</h1>
+          {projectData.subtitle && <h3>{projectData.subtitle}</h3>}
         </div>
 
 

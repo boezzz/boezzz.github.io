@@ -18,7 +18,7 @@ function CardItem(props) {
             </div>
             <img
               className='cards__item__img'
-              alt={props.text}
+              alt={props.title}
               src={props.src}
               loading="lazy"
               onLoad={() => setIsImageLoaded(true)}
@@ -29,7 +29,7 @@ function CardItem(props) {
             />
           </figure>
           <div className='cards__item__info'>
-            <h5 className='cards__item__text'>{props.text}</h5>
+            <h5 className='cards__item__text'>{props.title}</h5>
             {props.date && <span className='cards__item__date'>{props.date}</span>}
           </div>
         </Link>

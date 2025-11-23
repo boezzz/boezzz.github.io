@@ -1,45 +1,73 @@
 // Technical projects data
 const projectsData = [
   {
+    id: 'xr-association',
+    src: 'asset/images/father-of-vr.jpeg',
+    title: 'Extended Reality Association: Student XR Club at UW',
+    subtitle: 'Building a community for XR enthusiasts at the University of Washington',
+    path: '/xr-association',
+    tag: ['XR', 'Community'],
+    date: '2022-2025'
+  },
+  {
+    id: 'csf-justice',
+    src: 'asset/images/whenwesay-sustain.png',
+    title: 'CSF: Justice-centered grant making',
+    subtitle: null,
+    path: '/csf-justice',
+    tag: ['Sustainability', 'Justice'],
+    date: '2023-2025'
+  },
+  {
     id: 'ridewithgps-mcp',
     src: 'asset/images/ridewithgps-mcp.jpeg',
-    text: 'RideWithGPS MCP: AI + Cycling',
+    title: 'RideWithGPS MCP: AI + Cycling',
+    subtitle: null,
     path: '/ridewithgps-mcp',
     tag: ['AI', 'Open Source'],
-    date: 'July 2025'
+    date: '2025'
   },
   {
     id: 'xr-cooking-capstone',
     src: 'asset/images/IMG_2642.jpeg',
-    text: 'A preliminary exploration of XR cooking',
+    title: 'Contextual AI + XR for accessible cooking',
+    subtitle: 'In collaboration with Ben Kosa and Timothy Morris',
     path: '/xr-cooking-capstone',
     tag: ['XR', 'HCI'],
-    date: 'June 2024'
+    date: '2024'
   },
   {
     id: 'unspoken',
     src: 'asset/images/unspoken.png',
-    text: 'Using XR to learn American Sign Language: challenges and opportunities',
+    title: 'Using XR to learn American Sign Language: challenges and opportunities',
+    subtitle: 'In collaboration with Osco, Rinko, Shmoji, and Yifan',
     path: '/unspoken',
     tag: ['XR', 'Accessibility'],
-    date: 'March 2024'
+    date: '2024'
   },
   {
     id: 'beatbounce',
     src: 'asset/images/beatbounce.jpg',
-    text: 'BeatBounce: bringing music production to 3D',
+    title: 'Bringing music production to 3D',
+    subtitle: 'In collaboration with Jaclyn Chen, Eric Xiao, and Peyton Rapo',
     path: '/beatbounce',
     tag: ['XR', 'Music'],
-    date: 'May 2023'
+    date: '2023'
   },
   {
     id: 'forward-to-past',
     src: 'asset/images/tothepast.jpg',
-    text: 'Teaching history through conversation',
+    title: 'Immersive history education through AI avatars',
+    subtitle: 'In collaboration with Rylan Pozniak Daniels',
     path: '/forward-to-past',
     tag: ['AI', 'Education'],
-    date: 'February 2023'
+    date: '2023'
   }
 ];
+
+// Helper function to get project metadata by ID
+export const getProjectById = (id) => {
+  return projectsData.find(project => project.id === id);
+};
 
 export default projectsData;

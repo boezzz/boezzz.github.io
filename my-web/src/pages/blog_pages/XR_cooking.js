@@ -4,7 +4,9 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getProjectById } from '../../data/projects';
 
+const projectData = getProjectById('xr-cooking-capstone');
 
 function XRCooking() {
   return (
@@ -12,8 +14,8 @@ function XRCooking() {
       <Navbar />
 
       <div className='title'>
-        <h1>Having a virtual co-chef is a better idea than you thought</h1>
-        <h3>In collaboration with Ben Kosa and Timothy Morris</h3>
+        <h1>{projectData.title}</h1>
+        {projectData.subtitle && <h3>{projectData.subtitle}</h3>}
       </div>
 
         <article>

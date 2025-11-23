@@ -70,6 +70,11 @@ function PublicationItem({ publication }) {
                 [Demo]
               </a>
             )}
+            {links.poster && (
+              <a href={links.poster} target="_blank" rel="noopener noreferrer">
+                [Poster]
+              </a>
+            )}
             {links.dataset && (
               <a href={links.dataset} target="_blank" rel="noopener noreferrer">
                 [Dataset]

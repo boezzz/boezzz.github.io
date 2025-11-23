@@ -1,9 +1,8 @@
 import React from 'react';
 import './Research.css';
-import '../components/Cards.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import CardItem from '../components/CardItem';
+import PublicationItem from '../components/PublicationItem';
 import researchData from '../data/research';
 
 function Research() {
@@ -11,25 +10,22 @@ function Research() {
     <>
       <Navbar />
       <div className='research-container'>
-        <div className='cards__header'>
+        <div className='research-header'>
           <h1>Research</h1>
         </div>
 
-        <div className='cards__container'>
-          <div className='cards__wrapper'>
-            <ul className='cards__items'>
-              {researchData.map((item) => (
-                <CardItem
-                  key={item.id}
-                  src={item.src}
-                  text={item.text}
-                  path={item.path}
-                  tag={item.tag}
-                  date={item.date}
-                />
-              ))}
-            </ul>
-          </div>
+        <div className='research-list'>
+          {researchData.map((research) => (
+            <PublicationItem
+              key={research.id}
+              publication={{
+                ...research,
+                authors: research.subtitle ? research.subtitle.split(', ') : [],
+                year: research.date,
+                coverImage: research.src
+              }}
+            />
+          ))}
         </div>
       </div>
       <Footer />

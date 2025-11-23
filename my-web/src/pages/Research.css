@@ -7,13 +7,13 @@
 .research-header {
   text-align: center;
   margin-bottom: 60px;
+  color: var(--primary-color);
 }
 
 .research-header h1 {
   font-family: var(--font-primary);
-  font-size: 2.5rem;
-  color: var(--text-color-primary);
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .research-header p {
@@ -21,27 +21,11 @@
   font-size: 1.1rem;
   color: #666;
   margin: 0;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.research-cards {
-  max-width: 1200px;
+.research-list {
+  max-width: 900px;
   margin: 0 auto;
-}
-
-.research-cards__wrapper {
-  position: relative;
-}
-
-.research-cards__items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* Responsive design */
@@ -51,16 +35,11 @@
   }
 
   .research-header h1 {
-    font-size: 2.2rem;
+    font-size: 1.3rem;
   }
 
   .research-header p {
     font-size: 1rem;
-  }
-
-  .research-cards__items {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
   }
 }
 
@@ -74,16 +53,11 @@
   }
 
   .research-header h1 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .research-header p {
     font-size: 0.95rem;
-  }
-
-  .research-cards__items {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
 
@@ -93,6 +67,6 @@
   }
 
   .research-header h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }

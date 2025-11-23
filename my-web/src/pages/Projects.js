@@ -22,7 +22,7 @@ function Projects() {
                 <CardItem
                   key={item.id}
                   src={item.src}
-                  text={item.text}
+                  title={item.title}
                   path={item.path}
                   tag={item.tag}
                   date={item.date}

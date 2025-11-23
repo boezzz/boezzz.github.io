@@ -174,9 +174,10 @@ function Home() {
           <h1>News</h1>
           <ul>
             <li>9/2025: TA for CS557 graduate level computer graphics course taught by Prof. Gilbert Bernstein</li>
+            <li>8/2025: I was fortunate to be featured in the NIH AI-assisted Vision for Augmented Reality report</li>
             <li>8/2025: SIGGRAPH 2025</li>
             <li>3/2025: Speaking for the second time at The Washington Oregon Cascadia Higher Education Sustainability (WOHESC) Conference 2025</li>
-            <li>3/2025: Received my undergraduate degree from UW</li>
+            <li>3/2025: Received my undergraduate degree from UW. I can't be here without the support of everyone who helped me along the way over the past 4 years!</li>
             <li>12/2024: Wrapped up my Internship at the King County Department of Natural Resources and Parks</li>
             <li>12/2024: Paper published to ICLR [<a href='https://svd-keyframe-interpolation.github.io/'>Generative Inbetweening: Adapting Image-to-Video Models for Keyframe Interpolation</a>]</li>
             <li>10/2024: Speaking at The Association for the Advancement of Sustainability in Higher Education (AASHE) Conference 2025</li>

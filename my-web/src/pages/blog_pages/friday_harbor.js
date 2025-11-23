@@ -4,14 +4,17 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getBlogById } from '../../data/blogs';
 
+const blogData = getBlogById('friday-harbor-2024');
 
 function FridayHarbor() {
   return (
     <>
       <Navbar />
         <div className='title'>
-          <h1>San Juan Island: Slug, Hemlock, Mushroom, and the Pig War</h1>
+          <h1>{blogData.title}</h1>
+          {blogData.subtitle && <h3>{blogData.subtitle}</h3>}
         </div>
 
         <article>

@@ -4,7 +4,9 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getProjectById } from '../../data/projects';
 
+const projectData = getProjectById('beatbounce');
 
 function Beatbounce() {
   return (
@@ -12,8 +14,8 @@ function Beatbounce() {
       <Navbar />
 
       <div className='title'>
-        <h1>BeatBounce: bringing music production to 3D</h1>
-        <h3>In collaboration with Jaclyn Chen, Eric Xiao, and Peyton Rapo</h3>
+        <h1>{projectData.title}</h1>
+        {projectData.subtitle && <h3>{projectData.subtitle}</h3>}
       </div>
 
         <article>

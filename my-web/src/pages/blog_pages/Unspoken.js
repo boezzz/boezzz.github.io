@@ -4,15 +4,17 @@ import './Blogpage.css';
 
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import { getProjectById } from '../../data/projects';
 
+const projectData = getProjectById('unspoken');
 
 function Unspoken() {
   return (
     <>
       <Navbar />
         <div className='title'>
-          <h1>Using XR to learn American Sign Language: challenges and opportunties</h1>
-          <h3>In collaboration with Osco, Rinko, Shmoji, and Yifan</h3>
+          <h1>{projectData.title}</h1>
+          {projectData.subtitle && <h3>{projectData.subtitle}</h3>}
         </div>
 
         <article>
