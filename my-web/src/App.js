@@ -5,12 +5,12 @@ import {
   RouterProvider,
   useLocation,
   Outlet,
+  Navigate,
 } from "react-router-dom";
 
 // Import the pages here
 import NotFoundPage from './pages/NotFoundPage';
 import Home from './pages/Home';
-import Publications from './pages/Publications';
 import Research from './pages/Research';
 import Projects from './pages/Projects';
 import Blogs from './pages/Blogs';
@@ -26,6 +26,8 @@ import XRCooking from './pages/blog_pages/XR_cooking';
 import RidewithgpsMcp from './pages/blog_pages/RidewithgpsMcp';
 import XR_association from './pages/blog_pages/XR_association';
 import CSF_justice from './pages/blog_pages/CSF_justice';
+import Maps from './pages/blog_pages/Maps';
+import AR_health_tracking from './pages/blog_pages/AR_health_tracking';
 
 // ScrollToTop component
 const ScrollToTop = () => {
@@ -57,7 +59,7 @@ const router = createHashRouter([
       },
       {
         path: "/publications",
-        element: <Publications />,
+        element: <Navigate to="/research" replace />,
       },
       {
         path: "/research",
@@ -110,6 +112,14 @@ const router = createHashRouter([
       {
         path: "/csf-justice",
         element: <CSF_justice />,
+      },
+      {
+        path: "/maps",
+        element: <Maps />,
+      },
+      {
+        path: "/ar-health-tracking",
+        element: <AR_health_tracking />,
       },
     ],
   },

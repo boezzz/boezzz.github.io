@@ -74,16 +74,6 @@ export default class Navbar extends React.Component {
 
             <li className='nav-item'>
               <Link
-                to='/publications'
-                className='nav-links'
-                onClick={this.closeMobileMenu}
-              >
-                Publications
-              </Link>
-            </li>
-
-            <li className='nav-item'>
-              <Link
                 to='/research'
                 className='nav-links'
                 onClick={this.closeMobileMenu}

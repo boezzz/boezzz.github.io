@@ -58,6 +58,7 @@
     height: 100%;
     position: relative;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .nav-links::before {
@@ -115,7 +116,7 @@
     .nav-links {
         font-size: 1.6rem;
         text-align: center;
-        padding: 2rem;
+        padding: 1.2rem 2rem;
         width: 100%;
         display: table;
     }

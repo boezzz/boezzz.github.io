@@ -3,24 +3,25 @@
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
+    font-weight: 300;
     color-scheme: light;
   }
   
   :root {
     /* Fonts */
-    --font-primary: 'Fragment Mono', monospace;
-    --font-system: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-primary: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --font-system: 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --font-code: 'Courier New', monospace;
     --font-chinese: "Noto Serif SC", serif;
     --font-handwriting: "Shadows Into Light", serif;
     --font-pixel: "Press Start 2P", serif;
 
     /* Colors */
-    --primary-color: rgb(74, 125, 41);
-    --primary-color-light: rgba(74, 125, 41, 0.9);
-    --primary-color-medium: rgba(74, 125, 41, 0.8);
-    --primary-color-translucent: rgba(74, 125, 41, 0.5);
-    --primary-color-transparent: rgba(74, 125, 41, 0.4);
+    --primary-color: rgb(65, 110, 35);
+    --primary-color-light: rgba(65, 110, 35, 0.9);
+    --primary-color-medium: rgba(65, 110, 35, 0.8);
+    --primary-color-translucent: rgba(65, 110, 35, 0.5);
+    --primary-color-transparent: rgba(65, 110, 35, 0.4);
   
     --text-color-primary: rgb(30, 30, 30);
     --text-color-secondary: rgb(80, 80, 80);
@@ -45,7 +46,7 @@
     --shadow-color-dark-3: rgba(0, 0, 0, 0.2);
   
     --gradient-grey: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1) 100%);
-    --gradient-primary-light: linear-gradient(90deg, rgba(74, 125, 41, 0.8), rgba(74, 125, 41, 0.6));
+    --gradient-primary-light: linear-gradient(90deg, rgba(65, 110, 35, 0.8), rgba(65, 110, 35, 0.6));
     --gradient-dark: linear-gradient(40deg, #f0f0f0 0%, #e0e0e0 100%);
     --gradient-transparent-light: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.05), transparent);
     --gradient-navbar: linear-gradient(90deg, var(--background-color-dark) 0%, var(--background-color-navbar-end) 100%);

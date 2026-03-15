@@ -16,11 +16,12 @@ const publicationsData = [
       'Alberto Paderno',
       'Rania Hussein'
     ],
-    venue: 'Preprint',
-    year: '2025',
+    venue: 'JAMIA',
+    year: '2025 (in press)',
     coverImage: 'asset/images/care-cover.jpg',
     links: {
       webpage: 'https://uw-care.github.io/',
+      pdf: 'https://uw-care.github.io/static/papers/JAMIA_Paper__final_.pdf'
     },
     abstract: ''
   },

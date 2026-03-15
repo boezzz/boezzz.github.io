@@ -4,6 +4,7 @@
   padding: 30px 0;
   border-bottom: 1px solid #e0e0e0;
   align-items: flex-start;
+  font-weight: 200;
 }
 
 .publication-item:last-child {
@@ -40,7 +41,7 @@
 .publication-item__title {
   font-family: var(--font-primary);
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: var(--text-color-primary);
   margin: 0;
   line-height: 1.4;
@@ -48,15 +49,36 @@
 
 .publication-item__authors {
   font-family: var(--font-system);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-color-primary);
   margin: 0;
   line-height: 1.5;
 }
 
+.publication-item__collaborator {
+  font-family: var(--font-system);
+  font-size: 0.9rem;
+  color: var(--text-color-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.publication-item__collaborator a {
+  font-family: var(--font-system);
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.publication-item__collaborator a:hover {
+  color: #4a7d29;
+  text-decoration: underline;
+}
+
 .publication-item__venue {
   font-family: var(--font-system);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #666;
   margin: 0;
 }
@@ -99,6 +121,7 @@
   }
 
   .publication-item__authors,
+  .publication-item__collaborator,
   .publication-item__venue {
     font-size: 0.9rem;
   }

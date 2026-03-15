@@ -6,7 +6,7 @@ const projectsData = [
     title: 'Extended Reality Association: Student XR Club at UW',
     subtitle: 'Building a community for XR enthusiasts at the University of Washington',
     path: '/xr-association',
-    tag: ['XR', 'Community'],
+    tag: ['XR', 'Leadership'],
     date: '2022-2025'
   },
   {
@@ -21,10 +21,19 @@ const projectsData = [
   {
     id: 'ridewithgps-mcp',
     src: 'asset/images/ridewithgps-mcp.jpeg',
-    title: 'RideWithGPS MCP: AI + Cycling',
+    title: 'RideWithGPS MCP: LLM + Cycling',
     subtitle: null,
     path: '/ridewithgps-mcp',
-    tag: ['AI', 'Open Source'],
+    tag: ['AI', 'Health'],
+    date: '2025'
+  },
+  {
+    id: 'ar-health-tracking',
+    src: 'asset/images/frame-ar.jpeg',
+    title: 'Smart Glasses for Health Tracking',
+    subtitle: null,
+    path: '/ar-health-tracking',
+    tag: ['XR', 'Health'],
     date: '2025'
   },
   {
@@ -35,6 +44,15 @@ const projectsData = [
     path: '/xr-cooking-capstone',
     tag: ['XR', 'HCI'],
     date: '2024'
+  },
+  {
+    id: 'maps',
+    src: 'asset/images/bike-map.png',
+    title: 'Maps!',
+    subtitle: null,
+    path: '/maps',
+    tag: ['GIS'],
+    date: ''
   },
   {
     id: 'unspoken',

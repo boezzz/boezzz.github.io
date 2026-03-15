@@ -6,7 +6,7 @@ const blogsData = [
     title: 'Friday Harbor, 2024',
     subtitle: null,
     path: '/friday-harbor-2024',
-    tag: ['Travel', 'Sustainability'],
+    tag: ['Travel', 'Environment'],
     date: 'October 2024'
   }
 ];

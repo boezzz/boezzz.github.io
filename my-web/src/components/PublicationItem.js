@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PublicationItem.css';
 
 function PublicationItem({ publication }) {
-  const { title, authors, venue, year, coverImage, links, abstract } = publication;
+  const { title, authors, venue, year, coverImage, links, abstract, collaborator } = publication;
+  const [isMediaLoaded, setIsMediaLoaded] = useState(false);
 
   // Format authors list, bolding "Boyang Zhou"
   const formatAuthors = (authorsList) => {
     return authorsList.map((author, index) => {
-      const isBoe = author === 'Boyang Zhou';
+      const isBoe = author.startsWith('Boyang Zhou');
       const separator = index < authorsList.length - 1 ? ', ' : '';
 
       return (
@@ -26,9 +27,29 @@ function PublicationItem({ publication }) {
     <div className='publication-item'>
       <div className='publication-item__cover'>
         {isVideo ? (
-          <video src={coverImage} autoPlay loop muted playsInline />
+          <video
+            src={coverImage}
+            autoPlay
+            loop
+            muted
+            playsInline
+            onLoadedData={() => setIsMediaLoaded(true)}
+            style={{
+              opacity: isMediaLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in-out'
+            }}
+          />
         ) : (
-          <img src={coverImage} alt={`${title} cover`} />
+          <img
+            src={coverImage}
+            alt={`${title} cover`}
+            loading="lazy"
+            onLoad={() => setIsMediaLoaded(true)}
+            style={{
+              opacity: isMediaLoaded ? 1 : 0,
+              transition: 'opacity 0.3s ease-in-out'
+            }}
+          />
         )}
       </div>
 
@@ -38,6 +59,12 @@ function PublicationItem({ publication }) {
         <p className='publication-item__authors'>
           {formatAuthors(authors)}
         </p>
+
+        {collaborator && (
+          <p className='publication-item__collaborator'
+             dangerouslySetInnerHTML={{ __html: collaborator }}>
+          </p>
+        )}
 
         <p className='publication-item__venue'>
           <em>{venue} {year}</em>

@@ -1,15 +1,28 @@
 // Research projects data
 const researchData = [
   {
+    id: 'negative-commons',
+    src: 'asset/images/linux_workflow.png',
+    title: 'Addressing Negative Commons Governance with Positive Commons Principles',
+    subtitle: 'Boyang Zhou*, Oleg Ianchenko* (*equal contribution)',
+    collaborator: '(Special thanks to <a href="https://kurti.sh/" target="_blank" rel="noopener noreferrer">Dr. Kurtis Heimerl</a>)',
+    venue: 'Preprint',
+    date: '2025',
+    links: {
+      pdf: 'asset/LIMITS_Final_Paper.pdf'
+    },
+  },
+  {
     id: 'ttt-nn',
     src: 'asset/images/tttnn-results.png',
     title: 'Reproducibility Report: Test-Time Training on Nearest Neighbors for Large Language Models',
     subtitle: 'Boyang Zhou, Johan Lindqvist, Lindsey Li',
-    venue: '',
+    collaborator: '(Special thanks to <a href="https://mrtz.org/" target="_blank" rel="noopener noreferrer">Dr. Moritz Hardt</a> and <a href="https://yueatsprograms.github.io/" target="_blank" rel="noopener noreferrer">Dr. Yu Sun</a>)',
+    venue: 'arXiv',
     tag: ['Machine Learning', 'NLP'],
     date: '2025',
     links: {
-      pdf: 'asset/TTT-NN.pdf'
+      arxiv: 'https://arxiv.org/abs/2511.16691'
     },
     abstract: 'Research on TTT-NN methodology and applications.'
   },
@@ -31,6 +44,7 @@ const researchData = [
     src: 'asset/images/forest_first_frame.jpeg',
     title: 'mono6D: Online 6-DOF Viewer - Transforming Casually Captured 360° Video into On-The-Go 6-DOF Immersive Experiences',
     subtitle: 'Boyang Zhou',
+    collaborator: '(Special thanks to <a href="https://ana-serrano.github.io/" target="_blank" rel="noopener noreferrer">Dr. Ana Serrano</a>)',
     venue: '',
     tag: ['Graphics', 'XR'],
     date: '2025',
