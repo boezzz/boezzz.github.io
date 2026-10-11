@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_web=self.webpackChunkmy_web||[]).push([[39],{39:(e,s,n)=>{n.r(s),n.d(s,{default:()=>u});var t=n(43),o=(n(50),n(468)),r=n(802),c=n(579);const i=!1;const u=function(){return(0,t.useEffect)((()=>{document.title="Boe Zhou | Resume",window.scrollTo(0,0)}),[]),/iPhone|iPad|iPod|Android/i.test(navigator.userAgent),(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(o.A,{}),i,(0,c.jsx)("div",{className:"resume-container",children:"Contact me for my CV"}),(0,c.jsx)(r.A,{})]})}}}]);
+//# sourceMappingURL=39.cee65f7e.chunk.js.map
